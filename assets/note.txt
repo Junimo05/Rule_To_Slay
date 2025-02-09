@@ -1,0 +1,70 @@
+data Structure 
+    Party Leader
+            {
+            "id": "the_fist_of_reason",
+            "name": "The Fist of Reason",
+            "img_url": "",
+            "class": "Fighter",
+            "type": "Party Leader",
+            "aura": "Each time you roll to CHALLENGE, +2 to your roll"
+            },
+    Monster
+            {
+            "id": "abyss_queen",
+            "name": "Abyss Queen",
+            "img_url": "",
+            "type": "Monster",
+            "hero_req": 2,
+            "guardian_req": 0,
+            "thief_req": 0,
+            "wizard_req": 0,
+            "fighter_req": 0,
+            "bard_req": 0,
+            "ranger_req": 0,
+            "additional_req": "",
+            "special_slay_mechanism": ""
+            "success_slay_req": "8+",
+            "success_slay_bonus": "",
+            "failure_slay_req": "5-",
+            "failure_slay_penalty": "SACRIFICE a Hero card",
+            "reward_effect": "Each time another player plays a Modifier card on one of your rolls, +1 to your roll"
+            },
+    Hero 
+            {
+            "id": "bad_axe",
+            "name": "Bad Axe",
+            "img_url": "",
+            "class": "Fighter",
+            "type": "Hero",
+            "success_roll": "8+",
+            "effect": "DESTROY a Hero card"
+            },
+
+    ItemCard 
+            {
+                "id": "",
+                "name": "",
+                "type": ""
+                "img_url" 
+                "item_type": "", //cursed, normal, god, ........
+                "effect": //do sth
+                "additional_req": //optional
+            }
+    MagicCard 
+            {
+                "id": ""
+                "name":""
+                "img_url"
+                "type" 
+                "effect": //do sth
+                "additional_req": //optional
+            }
+    ChallengeCard 
+            {
+                "id": ""
+                "name":""
+                "type"
+                "img_url" 
+                "effect": //do sth
+                "additional_req": //optional
+            }
