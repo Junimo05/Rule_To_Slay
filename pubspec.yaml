@@ -53,6 +53,7 @@ dependencies:
   flutter_svg: ^2.0.17
   auto_size_text: ^3.0.0
   logger: ^2.5.0
+  stroke_text: ^1.0.0
 
 dev_dependencies:
   flutter_test:
