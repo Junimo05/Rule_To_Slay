@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rule_to_slay/constants/assets_const.dart';
 
 class RedirectCardItem extends StatefulWidget {
   final IconData leadingIcon;
@@ -64,36 +65,34 @@ class _RedirectCardItemState extends State<RedirectCardItem>
       builder: (context, _) {
         return SizedBox(
           width: _widthAnimation.value,
-          child: Card(
-            child: Stack(
-              children: [
-                Positioned.fill(
-                  child: Image.asset(
-                    'assets/imgs/magical_scroll.jpg',
-                    fit: BoxFit.fitWidth,
-                  ),
+          child: Stack(
+            children: [
+              Positioned.fill(
+                child: Image.asset(
+                  AssetImgs.rmbg_magical_scroll,
+                  fit: BoxFit.fitWidth,
                 ),
-                ListTile(
-                  contentPadding: const EdgeInsets.only(left: 70.0),
-                  leading: Icon(widget.leadingIcon),
-                  title: FadeTransition(
-                    opacity: _fadeAnimation,
-                    child: ClipRect(
-                      child: Text(
-                        widget.text,
-                        style: widget.textStyle,
-                        overflow: TextOverflow.clip,
-                        softWrap: false,
-                      ),
+              ),
+              ListTile(
+                contentPadding: const EdgeInsets.only(left: 70.0),
+                leading: Icon(widget.leadingIcon),
+                title: FadeTransition(
+                  opacity: _fadeAnimation,
+                  child: ClipRect(
+                    child: Text(
+                      widget.text,
+                      style: widget.textStyle,
+                      overflow: TextOverflow.clip,
+                      softWrap: false,
                     ),
                   ),
-                  trailing: widget.trailingIcon != null
-                      ? Icon(widget.trailingIcon)
-                      : null,
-                  onTap: widget.onTap,
                 ),
-              ],
-            ),
+                trailing: widget.trailingIcon != null
+                    ? Icon(widget.trailingIcon)
+                    : null,
+                onTap: widget.onTap,
+              ),
+            ],
           ),
         );
       },

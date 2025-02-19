@@ -34,8 +34,6 @@ const Map<CardSize, Size> cardDimensions = {
 };
 
 const Map<CardSize, double> cardAspectRatios = {
-  CardSize.large:
-      1 / 1.725454545454545, // width/height (base on size: 550 × 949)
-  CardSize.small:
-      1 / 1.399193548387097, // width/height (base on size: 496 × 694)
+  CardSize.large: 0.5845323741007194, // width/height (base on size: 650 × 1112)
+  CardSize.small: 0.7158590308370044, // width/height (base on size: 650 × 908)
 };

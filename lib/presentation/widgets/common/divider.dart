@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rule_to_slay/constants/assets_const.dart';
 
 class DecorDevider extends StatelessWidget {
   final String text;
@@ -10,7 +11,7 @@ class DecorDevider extends StatelessWidget {
     return Row(
       children: [
         Expanded(
-          child: Image.asset('assets/imgs/left_divider.png', fit: BoxFit.fill),
+          child: Image.asset(AssetImgs.leftDivider, fit: BoxFit.fill),
         ),
         Expanded(
           flex: 2,
@@ -26,7 +27,7 @@ class DecorDevider extends StatelessWidget {
         ),
         Expanded(
           child: Image.asset(
-            'assets/imgs/right_divider.png',
+            AssetImgs.rightDivider,
             fit: BoxFit.fill,
           ),
         ),

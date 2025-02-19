@@ -37,6 +37,7 @@ dependencies:
   cupertino_icons: ^1.0.8
   flutter_riverpod: ^2.6.1
   riverpod_annotation: ^2.6.1
+  visibility_detector: ^0.4.0+2
   meta: ^1.15.0
   dio: ^5.8.0+1
   image: ^4.5.2
@@ -49,6 +50,9 @@ dependencies:
   intl: ^0.19.0
   flutter_localizations:
     sdk: flutter
+  flutter_svg: ^2.0.17
+  auto_size_text: ^3.0.0
+  logger: ^2.5.0
 
 dev_dependencies:
   flutter_test:
@@ -84,6 +88,12 @@ flutter:
 
   assets:
     - assets/imgs/
+    - assets/imgs/background/
+    - assets/imgs/monsters/
+    - assets/imgs/heroes/
+    - assets/imgs/magic_challenge/magic/
+    - assets/imgs/magic_challenge/challenge/
+    - assets/imgs/items/
     - assets/gifs/
 
   # An image asset can refer to one or more resolution-specific "variants", see

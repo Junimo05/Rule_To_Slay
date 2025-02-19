@@ -1,4 +1,170 @@
 {
+    "@_App":{},
     "appTitle": "Rule To Slay",
-    "mainScreen_welcome": "Cam on vi da den"
+
+    "@_KEYWORDS":{},
+    "keyword_DRAW": "RÚT",
+    "keyword_Hero": "Anh Hùng",
+    "keyword_Item": "Vật Phẩm",
+    "keyword_Magic": "Phép Thuật",
+    "keyword_Monster": "Quái Vật",
+    "keyword_PartyLeader": "Đội Trưởng",
+    "keyword_ATTACK": "TẤN CÔNG",
+    "keyword_CHALLENGE": "THÁCH THỨC",
+    "keyword_DESTROY": "PHÁ HỦY",
+    "keyword_DISCARD": "BỎ",
+    "keyword_SACRIFICE": "HI SINH",
+    "keyword_STEAL": "CƯỚP",
+    "keyword_SLAY": "TIÊU DIỆT",
+    "keyword_MODIFIER": "PHÉP CHỈNH",
+
+    "@_MAINSCREEN":{},
+    "mainScreen_welcome": "Chào mừng đến với Rule To Slay",
+    "mainScreen_introduction": "Wiki, Công cụ và nhiều hơn nữa về trò chơi Here To Slay",
+
+    "@_HOWTOPLAYSCREEN":{},
+    "howToPlayScreen_whatsgameabout": "GIỚI THIỆU",
+    "howToPlayScreen_welcomeToHereToSlay": "Chào mừng đến với Here to Slay!",
+    "@welcomeToHereToSlay": {
+        "description": "Tiêu đề của trò chơi"
+    },
+    "howToPlayScreen_gameDescription": "Trong trò chơi này, bạn sẽ tập hợp một Đội Anh Hùng để tiêu diệt những Quái Vật nguy hiểm trong khi cố gắng kháng cự lại sự phá hoại của 'kẻ thù'. Bạn cũng sẽ trang bị vật phẩm cho các Anh Hùng của mình, sử dụng phép thuật mạnh mẽ và sử dụng các phép chỉnh (Modifier) xúc xắc để nghiêng cán cân có lợi cho bạn.",
+    "@gameDescription": {
+        "description": "Mô tả về trò chơi và mục tiêu của nó"
+    },
+    "howToPlayScreen_firstPlayerWins": "Người chơi đầu tiên tiêu diệt ba Quái Vật, hoặc tập hợp một Đội đầy đủ với sáu vai trò khác nhau, sẽ chiến thắng trò chơi!",
+    "@firstPlayerWins": {
+        "description": "Điều kiện chiến thắng của trò chơi"
+    },
+    "howToPlayScreen_gameDuration": "Một ván chơi Here to Slay điển hình sẽ kéo dài khoảng 30-60 phút.",
+    "@gameDuration": {
+        "description": "Thời lượng trung bình của trò chơi"
+    },
+    "howToPlayScreen_baseDeck": "BỘ BÀI CƠ BẢN",
+    "@howToPlayScreen_baseDeck": {
+        "description": "Tiêu đề của phần bộ bài cơ bản"
+    },
+    "howToPlayScreen_baseDeckDes1": "1 bộ bài chính (115 lá bài cỡ tiêu chuẩn)",
+    "howToPlayScreen_baseDeckDes2": "6 lá bài lớn của Đội trưởng (Party Leader)",
+    "howToPlayScreen_baseDeckDes3": "15 lá bài lớn của Quái Vật (Monster)",
+    "howToPlayScreen_baseDeckDes4": "6 lá bài tham khảo luật chơi",
+    "howToPlayScreen_baseDeckDes5": "2 xúc xắc sáu mặt",
+
+    "howToPlayScreen_baseSetUp": "THIẾT LẬP CƠ BẢN",
+    "@howToPlayScreen_baseSetUp": {
+        "description": "Tiêu đề của phần thiết lập cơ bản"
+    },
+    "howToPlayScreen_playerBoard_title": "Sân Người Chơi",
+    "@playerBoard_title": {
+        "description": "Tiêu đề của sân người chơi"
+    },
+    "howToPlayScreen_playerBoard_dimension1": "Các Anh Hùng",
+    "@playerBoard_dimension1": {
+        "description": "Nơi đặt lá bài anh hùng"
+    },
+    "howToPlayScreen_playerBoard_dimension2": "Đội Trưởng",
+    "@playerBoard_dimension2": {
+        "description": "Nơi đặt lá bài đội trưởng"
+    },
+    "howToPlayScreen_playerBoard_dimension3": "Các Quái Vật Đã Tiêu Diệt",
+    "@playerBoard_dimension3": {
+        "description": "Nơi đặt lá bài quái vật đã tiêu diệt"
+    },
+    "howToPlayScreen_playerBoard_dimension4": "Người Chơi 1",
+
+    "howToPlayScreen_mainBoard_title": "Trung Tâm",
+    "@mainBoard_title": {
+        "description": "Tiêu đề của bảng chính"
+    },
+    "howToPlayScreen_mainBoard_dimension1": "Quái Vật",
+    "@mainBoard_dimension1": {
+        "description": "Nơi đặt lá bài quái vật"
+    },
+    "howToPlayScreen_mainBoard_dimension2": "Bộ Bài Quái Vật",
+    "@mainBoard_dimension2": {
+        "description": "Nơi đặt bộ bài quái vật"
+    },
+    "howToPlayScreen_mainBoard_dimension3": "Chồng Bài Bỏ",
+    "@mainBoard_dimension3": {
+        "description": "Nơi đặt chồng bài bỏ"
+    },
+    "howToPlayScreen_mainBoard_dimension4": "Bộ Bài Vật Phẩm",
+    "@mainBoard_dimension4": {
+        "description": "Nơi đặt bộ bài chính"
+    },
+
+    "@howToPlayScreen_gamePlay_Start": {
+        "description": "Tiêu đề của phần bắt đầu trò chơi"
+    },
+
+    "howToPlayScreen_gamePlay_start1_title": "Phân Loại Thẻ & Chọn Đội Trưởng",
+    "howToPlayScreen_gamePlay_start1_step1": "Phân loại các loại thẻ khác nhau trong hộp",
+    "howToPlayScreen_gamePlay_start1_step2": "Mỗi người chơi chọn một nhân vật Đội Trưởng để đại diện cho họ trong suốt trò chơi",
+    "howToPlayScreen_gamePlay_start1_step2_1": "Sử dụng xúc xắc để quyết định ai đi trước",
+    "howToPlayScreen_gamePlay_start1_step2_2": "Hoặc để mọi người chọn nhân vật yêu thích của họ",
+    "howToPlayScreen_gamePlay_start1_step3": "Đặt lá bài Đội Trưởng của bạn vào Đội của bạn, là sân người chơi trước mặt bạn",
+    "howToPlayScreen_gamePlay_start1_step4": "Mỗi người chơi cũng có thể lấy một lá bài luật chơi (tùy chọn)",
+    "howToPlayScreen_gamePlay_start1_step5": "Đặt bất kỳ lá bài không sử dụng nào trở lại hộp",
+    "howToPlayScreen_gamePlay_start1_step5_1": "Lá bài Đội Trưởng",
+    "howToPlayScreen_gamePlay_start1_step5_2": "Lá bài luật chơi",
+
+    "howToPlayScreen_gamePlay_start2_title": "Thiết Lập Tay Bài & Bộ Bài Cơ Bản",
+    "howToPlayScreen_gamePlay_start2_step1": "Xáo trộn các lá bài cỡ tiêu chuẩn lại với nhau",
+    "howToPlayScreen_gamePlay_start2_step2": "Chia cho mỗi người chơi 5 lá bài (giữ trên tay)",
+    "howToPlayScreen_gamePlay_start2_step3": "Đặt chồng bài còn lại úp xuống giữa bàn để tạo thành bộ bài chính",
+    "howToPlayScreen_gamePlay_start2_step4": "Để trống không gian bên cạnh bộ bài chính cho chồng bài bỏ",
+    "howToPlayScreen_gamePlay_start2_step4_1": "Nơi bạn sẽ đặt lá bài bị:",
+    "howToPlayScreen_gamePlay_start2_step4_2": "Hi sinh",
+    "howToPlayScreen_gamePlay_start2_step4_3": "Bỏ",
+    "howToPlayScreen_gamePlay_start2_step4_4": "Phá hủy",
+
+    "howToPlayScreen_gamePlay_start3_title": "Thiết Lập Quái Vật",
+    "howToPlayScreen_gamePlay_start3_step1": "Xáo trộn các lá bài Quái Vật",
+    "howToPlayScreen_gamePlay_start3_step2": "Lật ba lá bài Quái Vật trên cùng lên giữa bàn",
+    "howToPlayScreen_gamePlay_start3_step3": "Đặt các lá bài Quái Vật còn lại úp xuống để tạo thành bộ bài Quái Vật",
+
+    "howToPlayScreen_gamePlay_Play_title": "Cách Chơi",
+    "@howToPlayScreen_gamePlay_Play_title": {
+        "description": "Tiêu đề của phần cách chơi"
+    },
+    "howToPlayScreen_gamePlay_Play_APPerTurn": "Điểm Hành Động Mỗi Lượt",
+    "howToPlayScreen_gamePlay_Play_ActPerTurn": "Hành Động Được Làm Mỗi Lượt",
+
+    "howToPlayScreen_gamePlay_Play_DrawCard": "<<DRAW>> một lá bài",
+    "@howToPlayScreen_gamePlay_Play_DrawCard": {
+        "description": "Hành động rút một lá bài"
+    },
+    "howToPlayScreen_gamePlay_Play_DrawCardDes": "<<DRAW>> một lá bài từ bộ bài",
+    "@howToPlayScreen_gamePlay_Play_DrawCardDes": {
+        "description": "Mô tả hành động rút một lá bài"
+    },
+
+    "howToPlayScreen_gamePlay_Play_PlayCard": "Chơi một lá bài",
+    "howToPlayScreen_gamePlay_Play_PlayCardDes": "Chơi một lá bài <<Hero>>, <<Item>>, hoặc <<Magic>>",
+    "@howToPlayScreen_gamePlay_Play_PlayCardDes": {
+        "description": "Mô tả hành động chơi một lá bài"
+    },
+
+    "howToPlayScreen_gamePlay_Play_useHeroEff": "Sử dụng hiệu ứng của <<Hero>>",
+    "@howToPlayScreen_gamePlay_Play_useHeroEff": {
+        "description": "Hành động sử dụng hiệu ứng của anh hùng"
+    },
+    "howToPlayScreen_gamePlay_Play_useHeroEffDes": "Sử dụng hiệu ứng của lá bài <<Hero>>",
+    "@howToPlayScreen_gamePlay_Play_useHeroEffDes": {
+        "description": "Mô tả hành động sử dụng hiệu ứng của anh hùng"
+    },
+    "howToPlayScreen_gamePlay_Play_SlayMonster": "<<ATTACK>> một lá bài <<Monster>>",
+    "howToPlayScreen_gamePlay_Play_SlayMonsterDes": "Đến lúc TIÊU DIỆT",
+    "@howToPlayScreen_gamePlay_Play_SlayMonster": {
+        "description": "Hành động tiêu diệt quái vật"
+    },
+
+    "howToPlayScreen_gamePlay_Play_DISCARD": "<<DISCARD>> tất cả các lá bài trên tay",
+    "@howToPlayScreen_gamePlay_Play_DISCARD": {
+        "description": "Hành động bỏ tất cả các lá bài trên tay"
+    },
+    "howToPlayScreen_gamePlay_Play_DISCARDDes": "Sau đó <<DRAW>> 5 lá bài mới",
+    "@howToPlayScreen_gamePlay_Play_DISCARDDes": {
+        "description": "Mô tả hành động bỏ tất cả các lá bài trên tay"
+    }
 }

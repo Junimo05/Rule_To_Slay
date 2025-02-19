@@ -1,4 +1,173 @@
 {
+    "@_App":{},
     "appTitle": "Rule To Slay",
-    "mainScreen_welcome": "Welcome to Rule To Slay"
+
+
+    "@_KEYWORDS":{},
+    "keyword_DRAW": "DRAW",
+    "keyword_Hero": "Hero",
+    "keyword_Item": "Item",
+    "keyword_Magic": "Magic",
+    "keyword_Monster": "Monster",
+    "keyword_PartyLeader": "Party Leader",
+    "keyword_ATTACK": "ATTACK",
+    "keyword_CHALLENGE": "CHALLENGE",
+    "keyword_DESTROY": "DESTROY",
+    "keyword_DISCARD": "DISCARD",
+    "keyword_SACRIFICE": "SACRIFICE",
+    "keyword_STEAL": "STEAL",
+    "keyword_SLAY": "SLAY",
+    "keyword_MODIFIER": "MODIFIER",
+    
+    "@_MAINSCREEN":{},
+    "mainScreen_welcome": "Welcome to Rule To Slay",
+    "mainScreen_introduction": "Wiki, Tools and more about Here To Slay Board Game",
+    
+    "@_HOWTOPLAYSCREEN":{},
+    "howToPlayScreen_whatsgameabout": "INTRODUCTION",
+    "howToPlayScreen_welcomeToHereToSlay": "Welcome to Here to Slay!",
+    "@welcomeToHereToSlay": {
+        "description": "Title of the game"
+    },
+    "howToPlayScreen_gameDescription": "In this game, you’ll assemble a full Party of Heroes to slay dangerous Monsters while working to avoid the sabotage of your enemies. You’ll also equip items to your Heroes, harness powerful magic, and use roll modifiers to tip the odds in your favor.",
+    "@gameDescription": {
+        "description": "Description of the game and its objectives"
+    },
+    "howToPlayScreen_firstPlayerWins": "The first player to SLAY three Monsters, or assemble a full Party with six different classes, wins the game!",
+    "@firstPlayerWins": {
+        "description": "Winning condition for the game"
+    },
+    "howToPlayScreen_gameDuration": "A typical game of Here to Slay takes approximately 30-60 minutes to complete.",
+    "@gameDuration": {
+        "description": "Average duration of the game"
+    },
+    "howToPlayScreen_baseDeck": "BASE DECK",
+    "@howToPlayScreen_baseDeck": {
+        "description": "Title of the base deck section"
+    },
+    "howToPlayScreen_baseDeckDes1": "1 main deck (115 standard-sized cards)",
+    "howToPlayScreen_baseDeckDes2": "6 oversized Party Leader cards",
+    "howToPlayScreen_baseDeckDes3": "15 oversized Monster cards",
+    "howToPlayScreen_baseDeckDes4": "6 rules reference cards",
+    "howToPlayScreen_baseDeckDes5": "2 six-sided dice",
+
+    "howToPlayScreen_baseSetUp": "BASE SETUP",
+    "@howToPlayScreen_baseSetUp": {
+        "description": "Title of the base set up section"
+    },
+    "howToPlayScreen_playerBoard_title": "Player Board",
+    "@playerBoard_title": {
+        "description": "Title of the player board"
+    },
+    "howToPlayScreen_playerBoard_dimension1": "Hero Cards",
+    "@playerBoard_dimension1": {
+        "description": "Where the hero card is placed"
+    },
+    "howToPlayScreen_playerBoard_dimension2": "Party Leader Card",
+    "@playerBoard_dimension2": {
+        "description": "Where the party leader card is placed"
+    },
+    "howToPlayScreen_playerBoard_dimension3": "Slayed Monster Cards",
+    "@playerBoard_dimension3": {
+        "description": "Where the slayed monster card is placed"
+    },
+    "howToPlayScreen_playerBoard_dimension4": "Player 1",
+
+    "howToPlayScreen_mainBoard_title": "Main Board",
+    "@mainBoard_title": {
+        "description": "Title of the main board"
+    },
+    "howToPlayScreen_mainBoard_dimension1": "Monster Cards",
+    "@mainBoard_dimension1": {
+        "description": "Where the monster card is placed"
+    },
+    "howToPlayScreen_mainBoard_dimension2": "Monster Deck",
+    "@mainBoard_dimension2": {
+        "description": "Where the monster deck is placed"
+    },
+    "howToPlayScreen_mainBoard_dimension3": "Discard Pile",
+    "@mainBoard_dimension3": {
+        "description": "Where the discard pile is placed"
+    },
+    "howToPlayScreen_mainBoard_dimension4": "Item Deck",
+    "@mainBoard_dimension4": {
+        "description": "Where the item deck is placed"
+    },
+
+    "@howToPlayScreen_gamePlay_Start": {
+        "description": "Title of the game play section"
+    },
+
+    "howToPlayScreen_gamePlay_start1_title": "Card separation & Party Leader selection",
+    "howToPlayScreen_gamePlay_start1_step1": "Separate the different types of cards in the box",
+    "howToPlayScreen_gamePlay_start1_step2": "Each player chooses a Party Leader character to represent them throughout the game",
+    "howToPlayScreen_gamePlay_start1_step2_1": "Use dice to decide who goes first",
+    "howToPlayScreen_gamePlay_start1_step2_2": "Or just let everyone choose their favorite character",
+    "howToPlayScreen_gamePlay_start1_step3": "Place your Party Leader card in your Party, which is the play area in front of you",
+    "howToPlayScreen_gamePlay_start1_step4": "Each player may also take a rules reference card (optional)",
+    "howToPlayScreen_gamePlay_start1_step5": "Place any unused cards back in the box",
+    "howToPlayScreen_gamePlay_start1_step5_1": "Leader Party card",
+    "howToPlayScreen_gamePlay_start1_step5_2": "Rules reference card",
+
+    "howToPlayScreen_gamePlay_start2_title": "Base Hand & Deck setup",
+    "howToPlayScreen_gamePlay_start2_step1": "Shuffle the standard-sized cards together",
+    "howToPlayScreen_gamePlay_start2_step2": "Deal each player 5 cards (keep it on your hand)",
+    "howToPlayScreen_gamePlay_start2_step3": "Place the remaining stack of cards face down in the center of the table to form the main deck",
+    "howToPlayScreen_gamePlay_start2_step4": "Leave space next to the main deck for a discard pile",
+    "howToPlayScreen_gamePlay_start2_step4_1": "Where you will place card that is:",
+    "howToPlayScreen_gamePlay_start2_step4_2": "Sacrificed",
+    "howToPlayScreen_gamePlay_start2_step4_3": "Discarded",
+    "howToPlayScreen_gamePlay_start2_step4_4": "Destroyed",
+
+    "howToPlayScreen_gamePlay_start3_title": "Monster setup",
+    "howToPlayScreen_gamePlay_start3_step1": "Shuffle the Monster cards",
+    "howToPlayScreen_gamePlay_start3_step2": "Flip the top three Monster cards face up in the center of the table",
+    "howToPlayScreen_gamePlay_start3_step3": "Place the remaining Monster cards face down to form the Monster deck",
+
+    "howToPlayScreen_gamePlay_Play_title": "How To Play",
+    "@howToPlayScreen_gamePlay_Play_title": {
+        "description": "Title of the game play section"
+    },
+    "howToPlayScreen_gamePlay_Play_APPerTurn": "Action Points Per Turn",
+    "howToPlayScreen_gamePlay_Play_ActPerTurn": "Actions Available Per Turn",
+
+    "howToPlayScreen_gamePlay_Play_DrawCard": "<<DRAW>> a Card",
+    "@howToPlayScreen_gamePlay_Play_DrawCard": {
+        "description": "Draw a card action"
+    },
+    "howToPlayScreen_gamePlay_Play_DrawCardDes": "<<DRAW>> a card from the deck",
+    "@howToPlayScreen_gamePlay_Play_DrawCardDes": {
+        "description": "Draw a card action description"
+    },
+    
+    "howToPlayScreen_gamePlay_Play_PlayCard": "Play a Card",
+    "howToPlayScreen_gamePlay_Play_PlayCardDes": "Play a <<Hero>>, <<Item>>, or <<Magic>> card",
+    "@howToPlayScreen_gamePlay_Play_PlayCardDes": {
+        "description": "Play a card action description"
+    },
+
+    "howToPlayScreen_gamePlay_Play_useHeroEff": "Use a <<Hero>> Effect",
+    "@howToPlayScreen_gamePlay_Play_useHeroEff": {
+        "description": "Use a hero effect action"
+    },
+    "howToPlayScreen_gamePlay_Play_useHeroEffDes": "Use a effect of a <<Hero>> card",
+    "@howToPlayScreen_gamePlay_Play_useHeroEffDes": {
+        "description": "Use a hero effect action description"
+    },
+    "howToPlayScreen_gamePlay_Play_SlayMonster": "<<ATTACK>> a <<Monster>> card",
+    "howToPlayScreen_gamePlay_Play_SlayMonsterDes": "Time to SLAY",
+    "@howToPlayScreen_gamePlay_Play_SlayMonster": {
+        "description": "Slay a monster action"
+    },
+
+    "howToPlayScreen_gamePlay_Play_DISCARD": "<<DISCARD>> all hand cards",
+    "@howToPlayScreen_gamePlay_Play_DISCARD": {
+        "description": "Discard all hand cards action"
+    },
+    "howToPlayScreen_gamePlay_Play_DISCARDDes": "Then <<DRAW>> 5 new cards",
+    "@howToPlayScreen_gamePlay_Play_DISCARDDes": {
+        "description": "Discard all hand cards action description"
+    }
+    
+
 }

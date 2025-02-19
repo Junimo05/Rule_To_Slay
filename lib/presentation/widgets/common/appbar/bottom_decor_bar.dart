@@ -26,7 +26,6 @@ class BottomDecorBar extends StatelessWidget {
             height: 75,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [],
             ),
           ),
         ),
