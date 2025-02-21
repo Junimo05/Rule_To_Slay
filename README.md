@@ -5,4 +5,4 @@
 
 ## About this Project
 
-A Wiki, Tools create Card for "Here To Slay" Board Game
+A Wiki, Tools and more about "Here To Slay" Board Game
