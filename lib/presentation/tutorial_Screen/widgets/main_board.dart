@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rule_to_slay/application/app_localizations.dart';
-import 'package:rule_to_slay/constants/assets_const.dart';
+import 'package:rule_to_slay/constants/const.dart';
 import 'package:rule_to_slay/constants/card_const.dart';
 import 'package:rule_to_slay/presentation/widgets/common/card/responsive_aspect_card.dart';
 import 'package:rule_to_slay/presentation/widgets/common/highlight_w_text.dart';
@@ -16,7 +16,7 @@ class MainBoard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
-    final screenHeight = MediaQuery.of(context).size.height;
+    // final screenHeight = MediaQuery.of(context).size.height;
 
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 8),
@@ -36,7 +36,7 @@ class MainBoard extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               foregroundDecoration: BoxDecoration(
                 border: Border.all(
-                  color: Colors.orange.withOpacity(0.5),
+                  color: Colors.orange.withValues(alpha: 0.5),
                   width: 2,
                 ),
               ),

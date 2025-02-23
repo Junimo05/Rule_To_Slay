@@ -14,6 +14,7 @@ _$CardModelImpl _$$CardModelImplFromJson(Map<String, dynamic> json) =>
       cardType: json['cardType'] == null
           ? CardType.UNKNOWN
           : cardTypeFromJson(json['cardType'] as String),
+      verType: json['ver_type'] as String,
     );
 
 Map<String, dynamic> _$$CardModelImplToJson(_$CardModelImpl instance) =>
@@ -22,4 +23,5 @@ Map<String, dynamic> _$$CardModelImplToJson(_$CardModelImpl instance) =>
       'name': instance.name,
       'imgUrl': instance.imgUrl,
       'cardType': cardTypeToJson(instance.cardType),
+      'ver_type': instance.verType,
     };

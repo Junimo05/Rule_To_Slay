@@ -116,7 +116,6 @@ class _HighlightWTextState extends State<HighlightWText>
                   );
                 },
                 child: Container(
-                  key: _widgetKey,
                   child: widget.child,
                 ),
               ),

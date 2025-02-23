@@ -17,6 +17,7 @@ _$LeaderPartyCardImpl _$$LeaderPartyCardImplFromJson(
           : cardTypeFromJson(json['type'] as String),
       classType: json['class'] as String,
       aura: json['aura'] as String,
+      verType: json['ver_type'] as String,
     );
 
 Map<String, dynamic> _$$LeaderPartyCardImplToJson(
@@ -28,4 +29,5 @@ Map<String, dynamic> _$$LeaderPartyCardImplToJson(
       'type': cardTypeToJson(instance.cardType),
       'class': instance.classType,
       'aura': instance.aura,
+      'ver_type': instance.verType,
     };

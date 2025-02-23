@@ -17,6 +17,7 @@ _$HeroCardImpl _$$HeroCardImplFromJson(Map<String, dynamic> json) =>
       classType: json['class'] as String,
       successDice: json['success_roll'] as String,
       effect: json['effect'] as String,
+      verType: json['ver_type'] as String,
     );
 
 Map<String, dynamic> _$$HeroCardImplToJson(_$HeroCardImpl instance) =>
@@ -28,4 +29,5 @@ Map<String, dynamic> _$$HeroCardImplToJson(_$HeroCardImpl instance) =>
       'class': instance.classType,
       'success_roll': instance.successDice,
       'effect': instance.effect,
+      'ver_type': instance.verType,
     };

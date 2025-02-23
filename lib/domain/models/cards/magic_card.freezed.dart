@@ -30,6 +30,8 @@ mixin _$MagicCard {
   String get effect => throw _privateConstructorUsedError;
   @JsonKey(name: 'additional_req')
   String? get additionalRequire => throw _privateConstructorUsedError;
+  @JsonKey(name: 'ver_type')
+  String get verType => throw _privateConstructorUsedError;
 
   /// Serializes this MagicCard to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -53,7 +55,8 @@ abstract class $MagicCardCopyWith<$Res> {
       @JsonKey(name: 'type', fromJson: cardTypeFromJson, toJson: cardTypeToJson)
       CardType cardType,
       @JsonKey(name: 'effect') String effect,
-      @JsonKey(name: 'additional_req') String? additionalRequire});
+      @JsonKey(name: 'additional_req') String? additionalRequire,
+      @JsonKey(name: 'ver_type') String verType});
 }
 
 /// @nodoc
@@ -77,6 +80,7 @@ class _$MagicCardCopyWithImpl<$Res, $Val extends MagicCard>
     Object? cardType = null,
     Object? effect = null,
     Object? additionalRequire = freezed,
+    Object? verType = null,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -103,6 +107,10 @@ class _$MagicCardCopyWithImpl<$Res, $Val extends MagicCard>
           ? _value.additionalRequire
           : additionalRequire // ignore: cast_nullable_to_non_nullable
               as String?,
+      verType: null == verType
+          ? _value.verType
+          : verType // ignore: cast_nullable_to_non_nullable
+              as String,
     ) as $Val);
   }
 }
@@ -122,7 +130,8 @@ abstract class _$$MagicCardImplCopyWith<$Res>
       @JsonKey(name: 'type', fromJson: cardTypeFromJson, toJson: cardTypeToJson)
       CardType cardType,
       @JsonKey(name: 'effect') String effect,
-      @JsonKey(name: 'additional_req') String? additionalRequire});
+      @JsonKey(name: 'additional_req') String? additionalRequire,
+      @JsonKey(name: 'ver_type') String verType});
 }
 
 /// @nodoc
@@ -144,6 +153,7 @@ class __$$MagicCardImplCopyWithImpl<$Res>
     Object? cardType = null,
     Object? effect = null,
     Object? additionalRequire = freezed,
+    Object? verType = null,
   }) {
     return _then(_$MagicCardImpl(
       id: null == id
@@ -170,13 +180,17 @@ class __$$MagicCardImplCopyWithImpl<$Res>
           ? _value.additionalRequire
           : additionalRequire // ignore: cast_nullable_to_non_nullable
               as String?,
+      verType: null == verType
+          ? _value.verType
+          : verType // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$MagicCardImpl implements _MagicCard {
+class _$MagicCardImpl extends _MagicCard {
   const _$MagicCardImpl(
       {required this.id,
       required this.name,
@@ -184,7 +198,9 @@ class _$MagicCardImpl implements _MagicCard {
       @JsonKey(name: 'type', fromJson: cardTypeFromJson, toJson: cardTypeToJson)
       this.cardType = CardType.MAGIC,
       @JsonKey(name: 'effect') required this.effect,
-      @JsonKey(name: 'additional_req') this.additionalRequire});
+      @JsonKey(name: 'additional_req') this.additionalRequire,
+      @JsonKey(name: 'ver_type') required this.verType})
+      : super._();
 
   factory _$MagicCardImpl.fromJson(Map<String, dynamic> json) =>
       _$$MagicCardImplFromJson(json);
@@ -205,10 +221,13 @@ class _$MagicCardImpl implements _MagicCard {
   @override
   @JsonKey(name: 'additional_req')
   final String? additionalRequire;
+  @override
+  @JsonKey(name: 'ver_type')
+  final String verType;
 
   @override
   String toString() {
-    return 'MagicCard(id: $id, name: $name, imgUrl: $imgUrl, cardType: $cardType, effect: $effect, additionalRequire: $additionalRequire)';
+    return 'MagicCard(id: $id, name: $name, imgUrl: $imgUrl, cardType: $cardType, effect: $effect, additionalRequire: $additionalRequire, verType: $verType)';
   }
 
   @override
@@ -223,13 +242,14 @@ class _$MagicCardImpl implements _MagicCard {
                 other.cardType == cardType) &&
             (identical(other.effect, effect) || other.effect == effect) &&
             (identical(other.additionalRequire, additionalRequire) ||
-                other.additionalRequire == additionalRequire));
+                other.additionalRequire == additionalRequire) &&
+            (identical(other.verType, verType) || other.verType == verType));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType, id, name, imgUrl, cardType, effect, additionalRequire);
+  int get hashCode => Object.hash(runtimeType, id, name, imgUrl, cardType,
+      effect, additionalRequire, verType);
 
   /// Create a copy of MagicCard
   /// with the given fields replaced by the non-null parameter values.
@@ -247,7 +267,7 @@ class _$MagicCardImpl implements _MagicCard {
   }
 }
 
-abstract class _MagicCard implements MagicCard {
+abstract class _MagicCard extends MagicCard {
   const factory _MagicCard(
       {required final String id,
       required final String name,
@@ -255,8 +275,10 @@ abstract class _MagicCard implements MagicCard {
       @JsonKey(name: 'type', fromJson: cardTypeFromJson, toJson: cardTypeToJson)
       final CardType cardType,
       @JsonKey(name: 'effect') required final String effect,
-      @JsonKey(name: 'additional_req')
-      final String? additionalRequire}) = _$MagicCardImpl;
+      @JsonKey(name: 'additional_req') final String? additionalRequire,
+      @JsonKey(name: 'ver_type')
+      required final String verType}) = _$MagicCardImpl;
+  const _MagicCard._() : super._();
 
   factory _MagicCard.fromJson(Map<String, dynamic> json) =
       _$MagicCardImpl.fromJson;
@@ -277,6 +299,9 @@ abstract class _MagicCard implements MagicCard {
   @override
   @JsonKey(name: 'additional_req')
   String? get additionalRequire;
+  @override
+  @JsonKey(name: 'ver_type')
+  String get verType;
 
   /// Create a copy of MagicCard
   /// with the given fields replaced by the non-null parameter values.

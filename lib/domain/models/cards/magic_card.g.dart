@@ -16,6 +16,7 @@ _$MagicCardImpl _$$MagicCardImplFromJson(Map<String, dynamic> json) =>
           : cardTypeFromJson(json['type'] as String),
       effect: json['effect'] as String,
       additionalRequire: json['additional_req'] as String?,
+      verType: json['ver_type'] as String,
     );
 
 Map<String, dynamic> _$$MagicCardImplToJson(_$MagicCardImpl instance) =>
@@ -26,4 +27,5 @@ Map<String, dynamic> _$$MagicCardImplToJson(_$MagicCardImpl instance) =>
       'type': cardTypeToJson(instance.cardType),
       'effect': instance.effect,
       'additional_req': instance.additionalRequire,
+      'ver_type': instance.verType,
     };

@@ -13,6 +13,7 @@ class CardModel with _$CardModel {
     @JsonKey(fromJson: cardTypeFromJson, toJson: cardTypeToJson)
     @Default(CardType.UNKNOWN)
     CardType cardType,
+    @JsonKey(name: 'ver_type') required String verType,
   }) = _CardModel;
 
   factory CardModel.fromJson(Map<String, dynamic> json) =>

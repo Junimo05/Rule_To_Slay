@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:rule_to_slay/constants/assets_const.dart';
+import 'package:rule_to_slay/constants/const.dart';
 import 'package:rule_to_slay/presentation/tutorial_Screen/widgets/base_box_description.dart';
 import 'package:rule_to_slay/presentation/tutorial_Screen/widgets/base_howToPlay.dart';
 import 'package:rule_to_slay/presentation/tutorial_Screen/widgets/base_introduction.dart';

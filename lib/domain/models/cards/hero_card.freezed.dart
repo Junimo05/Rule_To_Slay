@@ -32,6 +32,8 @@ mixin _$HeroCard {
   String get successDice => throw _privateConstructorUsedError;
   @JsonKey(name: 'effect')
   String get effect => throw _privateConstructorUsedError;
+  @JsonKey(name: 'ver_type')
+  String get verType => throw _privateConstructorUsedError;
 
   /// Serializes this HeroCard to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -56,7 +58,8 @@ abstract class $HeroCardCopyWith<$Res> {
       CardType cardType,
       @JsonKey(name: 'class') String classType,
       @JsonKey(name: 'success_roll') String successDice,
-      @JsonKey(name: 'effect') String effect});
+      @JsonKey(name: 'effect') String effect,
+      @JsonKey(name: 'ver_type') String verType});
 }
 
 /// @nodoc
@@ -81,6 +84,7 @@ class _$HeroCardCopyWithImpl<$Res, $Val extends HeroCard>
     Object? classType = null,
     Object? successDice = null,
     Object? effect = null,
+    Object? verType = null,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -111,6 +115,10 @@ class _$HeroCardCopyWithImpl<$Res, $Val extends HeroCard>
           ? _value.effect
           : effect // ignore: cast_nullable_to_non_nullable
               as String,
+      verType: null == verType
+          ? _value.verType
+          : verType // ignore: cast_nullable_to_non_nullable
+              as String,
     ) as $Val);
   }
 }
@@ -131,7 +139,8 @@ abstract class _$$HeroCardImplCopyWith<$Res>
       CardType cardType,
       @JsonKey(name: 'class') String classType,
       @JsonKey(name: 'success_roll') String successDice,
-      @JsonKey(name: 'effect') String effect});
+      @JsonKey(name: 'effect') String effect,
+      @JsonKey(name: 'ver_type') String verType});
 }
 
 /// @nodoc
@@ -154,6 +163,7 @@ class __$$HeroCardImplCopyWithImpl<$Res>
     Object? classType = null,
     Object? successDice = null,
     Object? effect = null,
+    Object? verType = null,
   }) {
     return _then(_$HeroCardImpl(
       id: null == id
@@ -184,13 +194,17 @@ class __$$HeroCardImplCopyWithImpl<$Res>
           ? _value.effect
           : effect // ignore: cast_nullable_to_non_nullable
               as String,
+      verType: null == verType
+          ? _value.verType
+          : verType // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$HeroCardImpl implements _HeroCard {
+class _$HeroCardImpl extends _HeroCard {
   const _$HeroCardImpl(
       {required this.id,
       required this.name,
@@ -199,7 +213,9 @@ class _$HeroCardImpl implements _HeroCard {
       this.cardType = CardType.HERO,
       @JsonKey(name: 'class') required this.classType,
       @JsonKey(name: 'success_roll') required this.successDice,
-      @JsonKey(name: 'effect') required this.effect});
+      @JsonKey(name: 'effect') required this.effect,
+      @JsonKey(name: 'ver_type') required this.verType})
+      : super._();
 
   factory _$HeroCardImpl.fromJson(Map<String, dynamic> json) =>
       _$$HeroCardImplFromJson(json);
@@ -223,10 +239,13 @@ class _$HeroCardImpl implements _HeroCard {
   @override
   @JsonKey(name: 'effect')
   final String effect;
+  @override
+  @JsonKey(name: 'ver_type')
+  final String verType;
 
   @override
   String toString() {
-    return 'HeroCard(id: $id, name: $name, imgUrl: $imgUrl, cardType: $cardType, classType: $classType, successDice: $successDice, effect: $effect)';
+    return 'HeroCard(id: $id, name: $name, imgUrl: $imgUrl, cardType: $cardType, classType: $classType, successDice: $successDice, effect: $effect, verType: $verType)';
   }
 
   @override
@@ -243,13 +262,14 @@ class _$HeroCardImpl implements _HeroCard {
                 other.classType == classType) &&
             (identical(other.successDice, successDice) ||
                 other.successDice == successDice) &&
-            (identical(other.effect, effect) || other.effect == effect));
+            (identical(other.effect, effect) || other.effect == effect) &&
+            (identical(other.verType, verType) || other.verType == verType));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType, id, name, imgUrl, cardType, classType, successDice, effect);
+  int get hashCode => Object.hash(runtimeType, id, name, imgUrl, cardType,
+      classType, successDice, effect, verType);
 
   /// Create a copy of HeroCard
   /// with the given fields replaced by the non-null parameter values.
@@ -267,7 +287,7 @@ class _$HeroCardImpl implements _HeroCard {
   }
 }
 
-abstract class _HeroCard implements HeroCard {
+abstract class _HeroCard extends HeroCard {
   const factory _HeroCard(
       {required final String id,
       required final String name,
@@ -276,7 +296,10 @@ abstract class _HeroCard implements HeroCard {
       final CardType cardType,
       @JsonKey(name: 'class') required final String classType,
       @JsonKey(name: 'success_roll') required final String successDice,
-      @JsonKey(name: 'effect') required final String effect}) = _$HeroCardImpl;
+      @JsonKey(name: 'effect') required final String effect,
+      @JsonKey(name: 'ver_type')
+      required final String verType}) = _$HeroCardImpl;
+  const _HeroCard._() : super._();
 
   factory _HeroCard.fromJson(Map<String, dynamic> json) =
       _$HeroCardImpl.fromJson;
@@ -300,6 +323,9 @@ abstract class _HeroCard implements HeroCard {
   @override
   @JsonKey(name: 'effect')
   String get effect;
+  @override
+  @JsonKey(name: 'ver_type')
+  String get verType;
 
   /// Create a copy of HeroCard
   /// with the given fields replaced by the non-null parameter values.

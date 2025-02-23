@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rule_to_slay/application/app_localizations.dart';
-import 'package:rule_to_slay/presentation/widgets/common/divider.dart';
+import 'package:rule_to_slay/presentation/widgets/common/decor_divider.dart';
 
 class BaseIntroduction extends StatelessWidget {
   const BaseIntroduction({super.key});

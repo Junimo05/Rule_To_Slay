@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:rule_to_slay/application/app_localizations.dart';
 import 'package:rule_to_slay/presentation/tutorial_Screen/widgets/main_board.dart';
-import 'package:rule_to_slay/presentation/widgets/common/divider.dart';
+import 'package:rule_to_slay/presentation/widgets/common/decor_divider.dart';
 import 'package:rule_to_slay/presentation/tutorial_Screen/widgets/player_board.dart';
 import 'package:rule_to_slay/presentation/widgets/common/step_container.dart';
 
@@ -11,7 +11,7 @@ class BaseSetUp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
-    final screenHeight = MediaQuery.of(context).size.height;
+    // final screenHeight = MediaQuery.of(context).size.height;
 
     return Column(
       children: [
@@ -59,11 +59,11 @@ class Step1Detailed extends StatelessWidget {
       content: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          BuildInstructionItem(
+          BuildInstructionItem.text(
               icon: Icons.sort,
               text: AppLocalizations.of(context)!
                   .howToPlayScreen_gamePlay_start1_step1),
-          BuildInstructionItem(
+          BuildInstructionItem.text(
             icon: Icons.person_search,
             text: AppLocalizations.of(context)!
                 .howToPlayScreen_gamePlay_start1_step2,
@@ -74,17 +74,17 @@ class Step1Detailed extends StatelessWidget {
                   .howToPlayScreen_gamePlay_start1_step2_2,
             ],
           ),
-          BuildInstructionItem(
+          BuildInstructionItem.text(
             icon: Icons.place,
             text: AppLocalizations.of(context)!
                 .howToPlayScreen_gamePlay_start1_step3,
           ),
-          BuildInstructionItem(
+          BuildInstructionItem.text(
             icon: Icons.assignment,
             text: AppLocalizations.of(context)!
                 .howToPlayScreen_gamePlay_start1_step4,
           ),
-          BuildInstructionItem(
+          BuildInstructionItem.text(
             icon: Icons.archive,
             text: AppLocalizations.of(context)!
                 .howToPlayScreen_gamePlay_start1_step5,
@@ -113,22 +113,22 @@ class Step2Detailed extends StatelessWidget {
       content: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          BuildInstructionItem(
+          BuildInstructionItem.text(
             icon: Icons.shuffle,
             text: AppLocalizations.of(context)!
                 .howToPlayScreen_gamePlay_start2_step1,
           ),
-          BuildInstructionItem(
+          BuildInstructionItem.text(
             icon: Icons.people_alt,
             text: AppLocalizations.of(context)!
                 .howToPlayScreen_gamePlay_start2_step2,
           ),
-          BuildInstructionItem(
+          BuildInstructionItem.text(
             icon: Icons.layers,
             text: AppLocalizations.of(context)!
                 .howToPlayScreen_gamePlay_start2_step3,
           ),
-          BuildInstructionItem(
+          BuildInstructionItem.text(
             icon: Icons.delete,
             text:
                 '${AppLocalizations.of(context)!.howToPlayScreen_gamePlay_start2_step4}. ${AppLocalizations.of(context)!.howToPlayScreen_gamePlay_start2_step4_1} ',
@@ -159,16 +159,16 @@ class Step3Detailed extends StatelessWidget {
       content: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          BuildInstructionItem(
+          BuildInstructionItem.text(
             icon: Icons.shuffle,
             text: AppLocalizations.of(context)!
                 .howToPlayScreen_gamePlay_start3_step1,
           ),
-          BuildInstructionItem(
+          BuildInstructionItem.text(
               icon: Icons.flip,
               text: AppLocalizations.of(context)!
                   .howToPlayScreen_gamePlay_start3_step2),
-          BuildInstructionItem(
+          BuildInstructionItem.text(
             icon: Icons.layers,
             text: AppLocalizations.of(context)!
                 .howToPlayScreen_gamePlay_start3_step3,

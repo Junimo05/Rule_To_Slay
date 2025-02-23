@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:rule_to_slay/application/app_localizations.dart';
 import 'package:rule_to_slay/application/router/router.dart';
-import 'package:rule_to_slay/constants/assets_const.dart';
+import 'package:rule_to_slay/constants/const.dart';
 import 'package:rule_to_slay/presentation/widgets/tooth_clipper/zigzagclipper.dart';
 
 class TopAppBar extends StatelessWidget implements PreferredSizeWidget {
@@ -21,7 +22,7 @@ class TopAppBar extends StatelessWidget implements PreferredSizeWidget {
             )
           : null,
       bottom: PreferredSize(
-        preferredSize: const Size.fromHeight(35),
+        preferredSize: const Size.fromHeight(40),
         child: Stack(
           children: [
             Positioned.fill(
@@ -34,7 +35,7 @@ class TopAppBar extends StatelessWidget implements PreferredSizeWidget {
               clipper:
                   ZigZagClipper(offset: 5, position: ZigZagPosition.bottom),
               child: Container(
-                height: 23,
+                height: 21,
                 color: Colors.white,
               ),
             ),
@@ -67,6 +68,32 @@ class TopAppBar extends StatelessWidget implements PreferredSizeWidget {
           bottom: Radius.circular(20),
         ),
       ),
+      actions: [_buildChangeLanguageButton(context)],
+    );
+  }
+
+  Widget _buildChangeLanguageButton(BuildContext context) {
+    final currentLocale = Localizations.localeOf(context);
+
+    return DropdownButton<Locale>(
+      value: currentLocale,
+      icon: Icon(Icons.language),
+      items: AppLocalizations.supportedLocales.map((Locale locale) {
+        return DropdownMenuItem<Locale>(
+          value: locale,
+          child: Text(
+            getLanguageName(locale),
+            style: TextStyle(
+              fontSize: 16,
+            ),
+          ),
+        );
+      }).toList(),
+      onChanged: (Locale? newLocale) {
+        if (newLocale != null) {
+          changeLanguage(context, newLocale);
+        }
+      },
     );
   }
 

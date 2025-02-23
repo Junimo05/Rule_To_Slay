@@ -25,21 +25,23 @@ mixin _$MonsterCard {
   @JsonKey(name: 'img_url')
   String get imgUrl => throw _privateConstructorUsedError;
   @JsonKey(name: 'type', fromJson: cardTypeFromJson, toJson: cardTypeToJson)
-  CardType get cardType => throw _privateConstructorUsedError; //Slay conditions
+  CardType get cardType => throw _privateConstructorUsedError;
+  @JsonKey(name: 'ver_type')
+  String get verType => throw _privateConstructorUsedError; //Slay conditions
   @JsonKey(name: 'hero_req')
   int get heroReq => throw _privateConstructorUsedError;
   @JsonKey(name: 'guardian_req')
-  int? get guardianReq => throw _privateConstructorUsedError;
+  int get guardianReq => throw _privateConstructorUsedError;
   @JsonKey(name: 'thief_req')
-  int? get thiefReq => throw _privateConstructorUsedError;
+  int get thiefReq => throw _privateConstructorUsedError;
   @JsonKey(name: 'wizard_req')
-  int? get wizardReq => throw _privateConstructorUsedError;
+  int get wizardReq => throw _privateConstructorUsedError;
   @JsonKey(name: 'fighter_req')
-  int? get fighterReq => throw _privateConstructorUsedError;
+  int get fighterReq => throw _privateConstructorUsedError;
   @JsonKey(name: 'bard_req')
-  int? get bardReq => throw _privateConstructorUsedError;
+  int get bardReq => throw _privateConstructorUsedError;
   @JsonKey(name: 'ranger_req')
-  int? get rangerReq => throw _privateConstructorUsedError;
+  int get rangerReq => throw _privateConstructorUsedError;
   @JsonKey(name: 'additional_req')
   String? get additionalReq => throw _privateConstructorUsedError;
   @JsonKey(name: 'special_slay_mechanism')
@@ -78,13 +80,14 @@ abstract class $MonsterCardCopyWith<$Res> {
       @JsonKey(name: 'img_url') String imgUrl,
       @JsonKey(name: 'type', fromJson: cardTypeFromJson, toJson: cardTypeToJson)
       CardType cardType,
+      @JsonKey(name: 'ver_type') String verType,
       @JsonKey(name: 'hero_req') int heroReq,
-      @JsonKey(name: 'guardian_req') int? guardianReq,
-      @JsonKey(name: 'thief_req') int? thiefReq,
-      @JsonKey(name: 'wizard_req') int? wizardReq,
-      @JsonKey(name: 'fighter_req') int? fighterReq,
-      @JsonKey(name: 'bard_req') int? bardReq,
-      @JsonKey(name: 'ranger_req') int? rangerReq,
+      @JsonKey(name: 'guardian_req') int guardianReq,
+      @JsonKey(name: 'thief_req') int thiefReq,
+      @JsonKey(name: 'wizard_req') int wizardReq,
+      @JsonKey(name: 'fighter_req') int fighterReq,
+      @JsonKey(name: 'bard_req') int bardReq,
+      @JsonKey(name: 'ranger_req') int rangerReq,
       @JsonKey(name: 'additional_req') String? additionalReq,
       @JsonKey(name: 'special_slay_mechanism') String? specialSlayMechanism,
       @JsonKey(name: 'success_slay_req') String successSlayReq,
@@ -113,13 +116,14 @@ class _$MonsterCardCopyWithImpl<$Res, $Val extends MonsterCard>
     Object? name = null,
     Object? imgUrl = null,
     Object? cardType = null,
+    Object? verType = null,
     Object? heroReq = null,
-    Object? guardianReq = freezed,
-    Object? thiefReq = freezed,
-    Object? wizardReq = freezed,
-    Object? fighterReq = freezed,
-    Object? bardReq = freezed,
-    Object? rangerReq = freezed,
+    Object? guardianReq = null,
+    Object? thiefReq = null,
+    Object? wizardReq = null,
+    Object? fighterReq = null,
+    Object? bardReq = null,
+    Object? rangerReq = null,
     Object? additionalReq = freezed,
     Object? specialSlayMechanism = freezed,
     Object? successSlayReq = null,
@@ -145,34 +149,38 @@ class _$MonsterCardCopyWithImpl<$Res, $Val extends MonsterCard>
           ? _value.cardType
           : cardType // ignore: cast_nullable_to_non_nullable
               as CardType,
+      verType: null == verType
+          ? _value.verType
+          : verType // ignore: cast_nullable_to_non_nullable
+              as String,
       heroReq: null == heroReq
           ? _value.heroReq
           : heroReq // ignore: cast_nullable_to_non_nullable
               as int,
-      guardianReq: freezed == guardianReq
+      guardianReq: null == guardianReq
           ? _value.guardianReq
           : guardianReq // ignore: cast_nullable_to_non_nullable
-              as int?,
-      thiefReq: freezed == thiefReq
+              as int,
+      thiefReq: null == thiefReq
           ? _value.thiefReq
           : thiefReq // ignore: cast_nullable_to_non_nullable
-              as int?,
-      wizardReq: freezed == wizardReq
+              as int,
+      wizardReq: null == wizardReq
           ? _value.wizardReq
           : wizardReq // ignore: cast_nullable_to_non_nullable
-              as int?,
-      fighterReq: freezed == fighterReq
+              as int,
+      fighterReq: null == fighterReq
           ? _value.fighterReq
           : fighterReq // ignore: cast_nullable_to_non_nullable
-              as int?,
-      bardReq: freezed == bardReq
+              as int,
+      bardReq: null == bardReq
           ? _value.bardReq
           : bardReq // ignore: cast_nullable_to_non_nullable
-              as int?,
-      rangerReq: freezed == rangerReq
+              as int,
+      rangerReq: null == rangerReq
           ? _value.rangerReq
           : rangerReq // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       additionalReq: freezed == additionalReq
           ? _value.additionalReq
           : additionalReq // ignore: cast_nullable_to_non_nullable
@@ -219,13 +227,14 @@ abstract class _$$MonsterCardImplCopyWith<$Res>
       @JsonKey(name: 'img_url') String imgUrl,
       @JsonKey(name: 'type', fromJson: cardTypeFromJson, toJson: cardTypeToJson)
       CardType cardType,
+      @JsonKey(name: 'ver_type') String verType,
       @JsonKey(name: 'hero_req') int heroReq,
-      @JsonKey(name: 'guardian_req') int? guardianReq,
-      @JsonKey(name: 'thief_req') int? thiefReq,
-      @JsonKey(name: 'wizard_req') int? wizardReq,
-      @JsonKey(name: 'fighter_req') int? fighterReq,
-      @JsonKey(name: 'bard_req') int? bardReq,
-      @JsonKey(name: 'ranger_req') int? rangerReq,
+      @JsonKey(name: 'guardian_req') int guardianReq,
+      @JsonKey(name: 'thief_req') int thiefReq,
+      @JsonKey(name: 'wizard_req') int wizardReq,
+      @JsonKey(name: 'fighter_req') int fighterReq,
+      @JsonKey(name: 'bard_req') int bardReq,
+      @JsonKey(name: 'ranger_req') int rangerReq,
       @JsonKey(name: 'additional_req') String? additionalReq,
       @JsonKey(name: 'special_slay_mechanism') String? specialSlayMechanism,
       @JsonKey(name: 'success_slay_req') String successSlayReq,
@@ -252,13 +261,14 @@ class __$$MonsterCardImplCopyWithImpl<$Res>
     Object? name = null,
     Object? imgUrl = null,
     Object? cardType = null,
+    Object? verType = null,
     Object? heroReq = null,
-    Object? guardianReq = freezed,
-    Object? thiefReq = freezed,
-    Object? wizardReq = freezed,
-    Object? fighterReq = freezed,
-    Object? bardReq = freezed,
-    Object? rangerReq = freezed,
+    Object? guardianReq = null,
+    Object? thiefReq = null,
+    Object? wizardReq = null,
+    Object? fighterReq = null,
+    Object? bardReq = null,
+    Object? rangerReq = null,
     Object? additionalReq = freezed,
     Object? specialSlayMechanism = freezed,
     Object? successSlayReq = null,
@@ -284,34 +294,38 @@ class __$$MonsterCardImplCopyWithImpl<$Res>
           ? _value.cardType
           : cardType // ignore: cast_nullable_to_non_nullable
               as CardType,
+      verType: null == verType
+          ? _value.verType
+          : verType // ignore: cast_nullable_to_non_nullable
+              as String,
       heroReq: null == heroReq
           ? _value.heroReq
           : heroReq // ignore: cast_nullable_to_non_nullable
               as int,
-      guardianReq: freezed == guardianReq
+      guardianReq: null == guardianReq
           ? _value.guardianReq
           : guardianReq // ignore: cast_nullable_to_non_nullable
-              as int?,
-      thiefReq: freezed == thiefReq
+              as int,
+      thiefReq: null == thiefReq
           ? _value.thiefReq
           : thiefReq // ignore: cast_nullable_to_non_nullable
-              as int?,
-      wizardReq: freezed == wizardReq
+              as int,
+      wizardReq: null == wizardReq
           ? _value.wizardReq
           : wizardReq // ignore: cast_nullable_to_non_nullable
-              as int?,
-      fighterReq: freezed == fighterReq
+              as int,
+      fighterReq: null == fighterReq
           ? _value.fighterReq
           : fighterReq // ignore: cast_nullable_to_non_nullable
-              as int?,
-      bardReq: freezed == bardReq
+              as int,
+      bardReq: null == bardReq
           ? _value.bardReq
           : bardReq // ignore: cast_nullable_to_non_nullable
-              as int?,
-      rangerReq: freezed == rangerReq
+              as int,
+      rangerReq: null == rangerReq
           ? _value.rangerReq
           : rangerReq // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       additionalReq: freezed == additionalReq
           ? _value.additionalReq
           : additionalReq // ignore: cast_nullable_to_non_nullable
@@ -346,13 +360,14 @@ class __$$MonsterCardImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$MonsterCardImpl implements _MonsterCard {
+class _$MonsterCardImpl extends _MonsterCard {
   const _$MonsterCardImpl(
       {required this.id,
       required this.name,
       @JsonKey(name: 'img_url') required this.imgUrl,
       @JsonKey(name: 'type', fromJson: cardTypeFromJson, toJson: cardTypeToJson)
       this.cardType = CardType.MONSTER,
+      @JsonKey(name: 'ver_type') required this.verType,
       @JsonKey(name: 'hero_req') required this.heroReq,
       @JsonKey(name: 'guardian_req') this.guardianReq = 0,
       @JsonKey(name: 'thief_req') this.thiefReq = 0,
@@ -360,13 +375,14 @@ class _$MonsterCardImpl implements _MonsterCard {
       @JsonKey(name: 'fighter_req') this.fighterReq = 0,
       @JsonKey(name: 'bard_req') this.bardReq = 0,
       @JsonKey(name: 'ranger_req') this.rangerReq = 0,
-      @JsonKey(name: 'additional_req') this.additionalReq = "",
-      @JsonKey(name: 'special_slay_mechanism') this.specialSlayMechanism = "",
+      @JsonKey(name: 'additional_req') this.additionalReq,
+      @JsonKey(name: 'special_slay_mechanism') this.specialSlayMechanism,
       @JsonKey(name: 'success_slay_req') required this.successSlayReq,
       @JsonKey(name: 'success_slay_bonus') this.successSlayBonus = "",
       @JsonKey(name: 'failure_slay_req') required this.failureSlayReq,
       @JsonKey(name: 'failure_slay_penalty') required this.failureSlayPenalty,
-      @JsonKey(name: 'reward_effect') required this.rewardEffect});
+      @JsonKey(name: 'reward_effect') required this.rewardEffect})
+      : super._();
 
   factory _$MonsterCardImpl.fromJson(Map<String, dynamic> json) =>
       _$$MonsterCardImplFromJson(json);
@@ -381,28 +397,31 @@ class _$MonsterCardImpl implements _MonsterCard {
   @override
   @JsonKey(name: 'type', fromJson: cardTypeFromJson, toJson: cardTypeToJson)
   final CardType cardType;
+  @override
+  @JsonKey(name: 'ver_type')
+  final String verType;
 //Slay conditions
   @override
   @JsonKey(name: 'hero_req')
   final int heroReq;
   @override
   @JsonKey(name: 'guardian_req')
-  final int? guardianReq;
+  final int guardianReq;
   @override
   @JsonKey(name: 'thief_req')
-  final int? thiefReq;
+  final int thiefReq;
   @override
   @JsonKey(name: 'wizard_req')
-  final int? wizardReq;
+  final int wizardReq;
   @override
   @JsonKey(name: 'fighter_req')
-  final int? fighterReq;
+  final int fighterReq;
   @override
   @JsonKey(name: 'bard_req')
-  final int? bardReq;
+  final int bardReq;
   @override
   @JsonKey(name: 'ranger_req')
-  final int? rangerReq;
+  final int rangerReq;
   @override
   @JsonKey(name: 'additional_req')
   final String? additionalReq;
@@ -428,7 +447,7 @@ class _$MonsterCardImpl implements _MonsterCard {
 
   @override
   String toString() {
-    return 'MonsterCard(id: $id, name: $name, imgUrl: $imgUrl, cardType: $cardType, heroReq: $heroReq, guardianReq: $guardianReq, thiefReq: $thiefReq, wizardReq: $wizardReq, fighterReq: $fighterReq, bardReq: $bardReq, rangerReq: $rangerReq, additionalReq: $additionalReq, specialSlayMechanism: $specialSlayMechanism, successSlayReq: $successSlayReq, successSlayBonus: $successSlayBonus, failureSlayReq: $failureSlayReq, failureSlayPenalty: $failureSlayPenalty, rewardEffect: $rewardEffect)';
+    return 'MonsterCard(id: $id, name: $name, imgUrl: $imgUrl, cardType: $cardType, verType: $verType, heroReq: $heroReq, guardianReq: $guardianReq, thiefReq: $thiefReq, wizardReq: $wizardReq, fighterReq: $fighterReq, bardReq: $bardReq, rangerReq: $rangerReq, additionalReq: $additionalReq, specialSlayMechanism: $specialSlayMechanism, successSlayReq: $successSlayReq, successSlayBonus: $successSlayBonus, failureSlayReq: $failureSlayReq, failureSlayPenalty: $failureSlayPenalty, rewardEffect: $rewardEffect)';
   }
 
   @override
@@ -441,6 +460,7 @@ class _$MonsterCardImpl implements _MonsterCard {
             (identical(other.imgUrl, imgUrl) || other.imgUrl == imgUrl) &&
             (identical(other.cardType, cardType) ||
                 other.cardType == cardType) &&
+            (identical(other.verType, verType) || other.verType == verType) &&
             (identical(other.heroReq, heroReq) || other.heroReq == heroReq) &&
             (identical(other.guardianReq, guardianReq) ||
                 other.guardianReq == guardianReq) &&
@@ -471,26 +491,28 @@ class _$MonsterCardImpl implements _MonsterCard {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      id,
-      name,
-      imgUrl,
-      cardType,
-      heroReq,
-      guardianReq,
-      thiefReq,
-      wizardReq,
-      fighterReq,
-      bardReq,
-      rangerReq,
-      additionalReq,
-      specialSlayMechanism,
-      successSlayReq,
-      successSlayBonus,
-      failureSlayReq,
-      failureSlayPenalty,
-      rewardEffect);
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        id,
+        name,
+        imgUrl,
+        cardType,
+        verType,
+        heroReq,
+        guardianReq,
+        thiefReq,
+        wizardReq,
+        fighterReq,
+        bardReq,
+        rangerReq,
+        additionalReq,
+        specialSlayMechanism,
+        successSlayReq,
+        successSlayBonus,
+        failureSlayReq,
+        failureSlayPenalty,
+        rewardEffect
+      ]);
 
   /// Create a copy of MonsterCard
   /// with the given fields replaced by the non-null parameter values.
@@ -508,20 +530,21 @@ class _$MonsterCardImpl implements _MonsterCard {
   }
 }
 
-abstract class _MonsterCard implements MonsterCard {
+abstract class _MonsterCard extends MonsterCard {
   const factory _MonsterCard(
       {required final String id,
       required final String name,
       @JsonKey(name: 'img_url') required final String imgUrl,
       @JsonKey(name: 'type', fromJson: cardTypeFromJson, toJson: cardTypeToJson)
       final CardType cardType,
+      @JsonKey(name: 'ver_type') required final String verType,
       @JsonKey(name: 'hero_req') required final int heroReq,
-      @JsonKey(name: 'guardian_req') final int? guardianReq,
-      @JsonKey(name: 'thief_req') final int? thiefReq,
-      @JsonKey(name: 'wizard_req') final int? wizardReq,
-      @JsonKey(name: 'fighter_req') final int? fighterReq,
-      @JsonKey(name: 'bard_req') final int? bardReq,
-      @JsonKey(name: 'ranger_req') final int? rangerReq,
+      @JsonKey(name: 'guardian_req') final int guardianReq,
+      @JsonKey(name: 'thief_req') final int thiefReq,
+      @JsonKey(name: 'wizard_req') final int wizardReq,
+      @JsonKey(name: 'fighter_req') final int fighterReq,
+      @JsonKey(name: 'bard_req') final int bardReq,
+      @JsonKey(name: 'ranger_req') final int rangerReq,
       @JsonKey(name: 'additional_req') final String? additionalReq,
       @JsonKey(name: 'special_slay_mechanism')
       final String? specialSlayMechanism,
@@ -532,6 +555,7 @@ abstract class _MonsterCard implements MonsterCard {
       required final String failureSlayPenalty,
       @JsonKey(name: 'reward_effect')
       required final String rewardEffect}) = _$MonsterCardImpl;
+  const _MonsterCard._() : super._();
 
   factory _MonsterCard.fromJson(Map<String, dynamic> json) =
       _$MonsterCardImpl.fromJson;
@@ -545,28 +569,31 @@ abstract class _MonsterCard implements MonsterCard {
   String get imgUrl;
   @override
   @JsonKey(name: 'type', fromJson: cardTypeFromJson, toJson: cardTypeToJson)
-  CardType get cardType; //Slay conditions
+  CardType get cardType;
+  @override
+  @JsonKey(name: 'ver_type')
+  String get verType; //Slay conditions
   @override
   @JsonKey(name: 'hero_req')
   int get heroReq;
   @override
   @JsonKey(name: 'guardian_req')
-  int? get guardianReq;
+  int get guardianReq;
   @override
   @JsonKey(name: 'thief_req')
-  int? get thiefReq;
+  int get thiefReq;
   @override
   @JsonKey(name: 'wizard_req')
-  int? get wizardReq;
+  int get wizardReq;
   @override
   @JsonKey(name: 'fighter_req')
-  int? get fighterReq;
+  int get fighterReq;
   @override
   @JsonKey(name: 'bard_req')
-  int? get bardReq;
+  int get bardReq;
   @override
   @JsonKey(name: 'ranger_req')
-  int? get rangerReq;
+  int get rangerReq;
   @override
   @JsonKey(name: 'additional_req')
   String? get additionalReq;

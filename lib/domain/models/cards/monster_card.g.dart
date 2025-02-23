@@ -14,6 +14,7 @@ _$MonsterCardImpl _$$MonsterCardImplFromJson(Map<String, dynamic> json) =>
       cardType: json['type'] == null
           ? CardType.MONSTER
           : cardTypeFromJson(json['type'] as String),
+      verType: json['ver_type'] as String,
       heroReq: (json['hero_req'] as num).toInt(),
       guardianReq: (json['guardian_req'] as num?)?.toInt() ?? 0,
       thiefReq: (json['thief_req'] as num?)?.toInt() ?? 0,
@@ -21,8 +22,8 @@ _$MonsterCardImpl _$$MonsterCardImplFromJson(Map<String, dynamic> json) =>
       fighterReq: (json['fighter_req'] as num?)?.toInt() ?? 0,
       bardReq: (json['bard_req'] as num?)?.toInt() ?? 0,
       rangerReq: (json['ranger_req'] as num?)?.toInt() ?? 0,
-      additionalReq: json['additional_req'] as String? ?? "",
-      specialSlayMechanism: json['special_slay_mechanism'] as String? ?? "",
+      additionalReq: json['additional_req'] as String?,
+      specialSlayMechanism: json['special_slay_mechanism'] as String?,
       successSlayReq: json['success_slay_req'] as String,
       successSlayBonus: json['success_slay_bonus'] as String? ?? "",
       failureSlayReq: json['failure_slay_req'] as String,
@@ -36,6 +37,7 @@ Map<String, dynamic> _$$MonsterCardImplToJson(_$MonsterCardImpl instance) =>
       'name': instance.name,
       'img_url': instance.imgUrl,
       'type': cardTypeToJson(instance.cardType),
+      'ver_type': instance.verType,
       'hero_req': instance.heroReq,
       'guardian_req': instance.guardianReq,
       'thief_req': instance.thiefReq,

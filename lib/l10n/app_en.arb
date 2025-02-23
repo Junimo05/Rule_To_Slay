@@ -3,7 +3,14 @@
     "appTitle": "Rule To Slay",
 
 
+    "@_REDIRECT_CARD_TEXT":{},
+    "redirect_HowToPlay": "How To Play",
+    "redirect_CardList": "Cards",
+    
+
     "@_KEYWORDS":{},
+    "keyword_AP": "AP",
+    "keyword_Imdediately": "Immediately",
     "keyword_DRAW": "DRAW",
     "keyword_Hero": "Hero",
     "keyword_Item": "Item",
@@ -24,6 +31,7 @@
     "mainScreen_introduction": "Wiki, Tools and more about Here To Slay Board Game",
     
     "@_HOWTOPLAYSCREEN":{},
+    "@_HOWOTPLAYSCREEN__INTRO":{},
     "howToPlayScreen_whatsgameabout": "INTRODUCTION",
     "howToPlayScreen_welcomeToHereToSlay": "Welcome to Here to Slay!",
     "@welcomeToHereToSlay": {
@@ -41,6 +49,7 @@
     "@gameDuration": {
         "description": "Average duration of the game"
     },
+    "@_HOWOTPLAYSCREEN__BASEDECK":{},
     "howToPlayScreen_baseDeck": "BASE DECK",
     "@howToPlayScreen_baseDeck": {
         "description": "Title of the base deck section"
@@ -50,7 +59,8 @@
     "howToPlayScreen_baseDeckDes3": "15 oversized Monster cards",
     "howToPlayScreen_baseDeckDes4": "6 rules reference cards",
     "howToPlayScreen_baseDeckDes5": "2 six-sided dice",
-
+    
+    "@_HOWOTPLAYSCREEN__BASESETUP":{},
     "howToPlayScreen_baseSetUp": "BASE SETUP",
     "@howToPlayScreen_baseSetUp": {
         "description": "Title of the base set up section"
@@ -94,6 +104,7 @@
         "description": "Where the item deck is placed"
     },
 
+    "@_HOWOTPLAYSCREEN__GAMEPLAY":{},
     "@howToPlayScreen_gamePlay_Start": {
         "description": "Title of the game play section"
     },
@@ -124,6 +135,7 @@
     "howToPlayScreen_gamePlay_start3_step2": "Flip the top three Monster cards face up in the center of the table",
     "howToPlayScreen_gamePlay_start3_step3": "Place the remaining Monster cards face down to form the Monster deck",
 
+    "@_HOWOTPLAYSCREEN__GAMEPLAY__PLAY":{},
     "howToPlayScreen_gamePlay_Play_title": "How To Play",
     "@howToPlayScreen_gamePlay_Play_title": {
         "description": "Title of the game play section"
@@ -167,7 +179,18 @@
     "howToPlayScreen_gamePlay_Play_DISCARDDes": "Then <<DRAW>> 5 new cards",
     "@howToPlayScreen_gamePlay_Play_DISCARDDes": {
         "description": "Discard all hand cards action description"
-    }
+    },
     
-
+    "@_HOWOTPLAYSCREEN__GAMEPLAY__PLAY__NOTE":{},
+    "howToPlayScreen_gamePlay_Play_NoteTittle": "Important Notes",
+    "howToPlayScreen_gamePlay_Play_Note1": "Players take turns clockwise and only have 3 <<AP>> per turn",
+    "howToPlayScreen_gamePlay_Play_Note2": "<<AP>> can be used flexibly",
+    "howToPlayScreen_gamePlay_Play_Note2_1": "Actions can be performed in any order",
+    "howToPlayScreen_gamePlay_Play_Note2_2": "The same Action can be repeated",
+    "howToPlayScreen_gamePlay_Play_Note3": "Hero Card restrictions",
+    "howToPlayScreen_gamePlay_Play_Note3_1": "Can only roll for a <<Hero>>’s effect once per turn (even if the roll fails)",
+    "howToPlayScreen_gamePlay_Play_Note3_2": "When playing a <<Hero>> card from your hand, you may roll for its effect immediately (no extra <<AP>> cost)",
+    "howToPlayScreen_gamePlay_Play_Note4": "Card effects labeled <<Immediately>> do not require additional AP to execute",
+    "howToPlayScreen_gamePlay_Play_Note5": "Turn ends when you run out of <<AP>> or choose to stop (unused <<AP>> are forfeited)"
+    
 }

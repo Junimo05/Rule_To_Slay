@@ -30,6 +30,8 @@ mixin _$ChallengeCard {
   String get effect => throw _privateConstructorUsedError;
   @JsonKey(name: 'additional_req')
   String? get additionalRequire => throw _privateConstructorUsedError;
+  @JsonKey(name: 'ver_type')
+  String get verType => throw _privateConstructorUsedError;
 
   /// Serializes this ChallengeCard to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -54,7 +56,8 @@ abstract class $ChallengeCardCopyWith<$Res> {
       @JsonKey(name: 'type', fromJson: cardTypeFromJson, toJson: cardTypeToJson)
       CardType cardType,
       @JsonKey(name: 'effect') String effect,
-      @JsonKey(name: 'additional_req') String? additionalRequire});
+      @JsonKey(name: 'additional_req') String? additionalRequire,
+      @JsonKey(name: 'ver_type') String verType});
 }
 
 /// @nodoc
@@ -78,6 +81,7 @@ class _$ChallengeCardCopyWithImpl<$Res, $Val extends ChallengeCard>
     Object? cardType = null,
     Object? effect = null,
     Object? additionalRequire = freezed,
+    Object? verType = null,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -104,6 +108,10 @@ class _$ChallengeCardCopyWithImpl<$Res, $Val extends ChallengeCard>
           ? _value.additionalRequire
           : additionalRequire // ignore: cast_nullable_to_non_nullable
               as String?,
+      verType: null == verType
+          ? _value.verType
+          : verType // ignore: cast_nullable_to_non_nullable
+              as String,
     ) as $Val);
   }
 }
@@ -123,7 +131,8 @@ abstract class _$$ChallengeCardImplCopyWith<$Res>
       @JsonKey(name: 'type', fromJson: cardTypeFromJson, toJson: cardTypeToJson)
       CardType cardType,
       @JsonKey(name: 'effect') String effect,
-      @JsonKey(name: 'additional_req') String? additionalRequire});
+      @JsonKey(name: 'additional_req') String? additionalRequire,
+      @JsonKey(name: 'ver_type') String verType});
 }
 
 /// @nodoc
@@ -145,6 +154,7 @@ class __$$ChallengeCardImplCopyWithImpl<$Res>
     Object? cardType = null,
     Object? effect = null,
     Object? additionalRequire = freezed,
+    Object? verType = null,
   }) {
     return _then(_$ChallengeCardImpl(
       id: null == id
@@ -171,13 +181,17 @@ class __$$ChallengeCardImplCopyWithImpl<$Res>
           ? _value.additionalRequire
           : additionalRequire // ignore: cast_nullable_to_non_nullable
               as String?,
+      verType: null == verType
+          ? _value.verType
+          : verType // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$ChallengeCardImpl implements _ChallengeCard {
+class _$ChallengeCardImpl extends _ChallengeCard {
   const _$ChallengeCardImpl(
       {required this.id,
       required this.name,
@@ -185,7 +199,9 @@ class _$ChallengeCardImpl implements _ChallengeCard {
       @JsonKey(name: 'type', fromJson: cardTypeFromJson, toJson: cardTypeToJson)
       this.cardType = CardType.CHALLENGE,
       @JsonKey(name: 'effect') required this.effect,
-      @JsonKey(name: 'additional_req') this.additionalRequire});
+      @JsonKey(name: 'additional_req') this.additionalRequire,
+      @JsonKey(name: 'ver_type') required this.verType})
+      : super._();
 
   factory _$ChallengeCardImpl.fromJson(Map<String, dynamic> json) =>
       _$$ChallengeCardImplFromJson(json);
@@ -206,10 +222,13 @@ class _$ChallengeCardImpl implements _ChallengeCard {
   @override
   @JsonKey(name: 'additional_req')
   final String? additionalRequire;
+  @override
+  @JsonKey(name: 'ver_type')
+  final String verType;
 
   @override
   String toString() {
-    return 'ChallengeCard(id: $id, name: $name, imgUrl: $imgUrl, cardType: $cardType, effect: $effect, additionalRequire: $additionalRequire)';
+    return 'ChallengeCard(id: $id, name: $name, imgUrl: $imgUrl, cardType: $cardType, effect: $effect, additionalRequire: $additionalRequire, verType: $verType)';
   }
 
   @override
@@ -224,13 +243,14 @@ class _$ChallengeCardImpl implements _ChallengeCard {
                 other.cardType == cardType) &&
             (identical(other.effect, effect) || other.effect == effect) &&
             (identical(other.additionalRequire, additionalRequire) ||
-                other.additionalRequire == additionalRequire));
+                other.additionalRequire == additionalRequire) &&
+            (identical(other.verType, verType) || other.verType == verType));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType, id, name, imgUrl, cardType, effect, additionalRequire);
+  int get hashCode => Object.hash(runtimeType, id, name, imgUrl, cardType,
+      effect, additionalRequire, verType);
 
   /// Create a copy of ChallengeCard
   /// with the given fields replaced by the non-null parameter values.
@@ -248,7 +268,7 @@ class _$ChallengeCardImpl implements _ChallengeCard {
   }
 }
 
-abstract class _ChallengeCard implements ChallengeCard {
+abstract class _ChallengeCard extends ChallengeCard {
   const factory _ChallengeCard(
       {required final String id,
       required final String name,
@@ -256,8 +276,10 @@ abstract class _ChallengeCard implements ChallengeCard {
       @JsonKey(name: 'type', fromJson: cardTypeFromJson, toJson: cardTypeToJson)
       final CardType cardType,
       @JsonKey(name: 'effect') required final String effect,
-      @JsonKey(name: 'additional_req')
-      final String? additionalRequire}) = _$ChallengeCardImpl;
+      @JsonKey(name: 'additional_req') final String? additionalRequire,
+      @JsonKey(name: 'ver_type')
+      required final String verType}) = _$ChallengeCardImpl;
+  const _ChallengeCard._() : super._();
 
   factory _ChallengeCard.fromJson(Map<String, dynamic> json) =
       _$ChallengeCardImpl.fromJson;
@@ -278,6 +300,9 @@ abstract class _ChallengeCard implements ChallengeCard {
   @override
   @JsonKey(name: 'additional_req')
   String? get additionalRequire;
+  @override
+  @JsonKey(name: 'ver_type')
+  String get verType;
 
   /// Create a copy of ChallengeCard
   /// with the given fields replaced by the non-null parameter values.

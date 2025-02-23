@@ -1,5 +1,10 @@
 // ignore_for_file: constant_identifier_names
 
+import 'dart:ui';
+
+import 'package:flutter/material.dart';
+import 'package:rule_to_slay/main.dart';
+
 class AssetImgs {
   //Base
   static const String monsterBase = 'assets/imgs/monsters/';
@@ -50,4 +55,42 @@ class AssetImgs {
       "assets/imgs/magic_challenge/magic/critical_boost.jpg";
   //Monster Example
   static const String monster_example = "assets/imgs/monsters/abyss_queen.jpg";
+}
+
+class GameKeyWord {
+  static const String AP = "AP";
+  static const String Immediately = "Immediately";
+  static const String DRAW = 'DRAW';
+  static const String Hero = 'Hero';
+  static const String Item = 'Item';
+  static const String Magic = 'Magic';
+  static const String PartyLeader = 'PartyLeader';
+  static const String Monster = 'Monster';
+  static const String ATTACK = 'ATTACK';
+  static const String CHALLENGE = 'CHALLENGE';
+  static const String DESTROY = 'DESTROY';
+  static const String DISCARD = 'DISCARD';
+  static const String SACRIFICE = 'SACRIFICE';
+  static const String STEAL = 'STEAL';
+  static const String SLAY = 'SLAY';
+  static const String MODIFIER = 'MODIFIER';
+}
+
+String getLanguageName(Locale locale) {
+  switch (locale.languageCode) {
+    case 'en':
+      return 'English';
+    case 'vi':
+      return 'Tiếng Việt';
+    default:
+      return 'English';
+  }
+}
+
+void changeLanguage(BuildContext context, Locale newLocale) {
+  // Đối với ứng dụng đơn giản
+  MyApp.setLocale(context, newLocale);
+
+  // Hoặc sử dụng state management
+  // Provider.of<LocaleProvider>(context, listen: false).setLocale(newLocale);
 }

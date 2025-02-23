@@ -32,6 +32,8 @@ mixin _$ItemCard {
   String get effect => throw _privateConstructorUsedError;
   @JsonKey(name: 'additional_req')
   String? get additionalRequire => throw _privateConstructorUsedError;
+  @JsonKey(name: 'ver_type')
+  String get verType => throw _privateConstructorUsedError;
 
   /// Serializes this ItemCard to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -56,7 +58,8 @@ abstract class $ItemCardCopyWith<$Res> {
       CardType cardType,
       @JsonKey(name: 'item_type') String itemType,
       @JsonKey(name: 'effect') String effect,
-      @JsonKey(name: 'additional_req') String? additionalRequire});
+      @JsonKey(name: 'additional_req') String? additionalRequire,
+      @JsonKey(name: 'ver_type') String verType});
 }
 
 /// @nodoc
@@ -81,6 +84,7 @@ class _$ItemCardCopyWithImpl<$Res, $Val extends ItemCard>
     Object? itemType = null,
     Object? effect = null,
     Object? additionalRequire = freezed,
+    Object? verType = null,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -111,6 +115,10 @@ class _$ItemCardCopyWithImpl<$Res, $Val extends ItemCard>
           ? _value.additionalRequire
           : additionalRequire // ignore: cast_nullable_to_non_nullable
               as String?,
+      verType: null == verType
+          ? _value.verType
+          : verType // ignore: cast_nullable_to_non_nullable
+              as String,
     ) as $Val);
   }
 }
@@ -131,7 +139,8 @@ abstract class _$$ItemCardImplCopyWith<$Res>
       CardType cardType,
       @JsonKey(name: 'item_type') String itemType,
       @JsonKey(name: 'effect') String effect,
-      @JsonKey(name: 'additional_req') String? additionalRequire});
+      @JsonKey(name: 'additional_req') String? additionalRequire,
+      @JsonKey(name: 'ver_type') String verType});
 }
 
 /// @nodoc
@@ -154,6 +163,7 @@ class __$$ItemCardImplCopyWithImpl<$Res>
     Object? itemType = null,
     Object? effect = null,
     Object? additionalRequire = freezed,
+    Object? verType = null,
   }) {
     return _then(_$ItemCardImpl(
       id: null == id
@@ -184,13 +194,17 @@ class __$$ItemCardImplCopyWithImpl<$Res>
           ? _value.additionalRequire
           : additionalRequire // ignore: cast_nullable_to_non_nullable
               as String?,
+      verType: null == verType
+          ? _value.verType
+          : verType // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$ItemCardImpl implements _ItemCard {
+class _$ItemCardImpl extends _ItemCard {
   const _$ItemCardImpl(
       {required this.id,
       required this.name,
@@ -199,7 +213,9 @@ class _$ItemCardImpl implements _ItemCard {
       this.cardType = CardType.ITEM,
       @JsonKey(name: 'item_type') required this.itemType,
       @JsonKey(name: 'effect') required this.effect,
-      @JsonKey(name: 'additional_req') this.additionalRequire});
+      @JsonKey(name: 'additional_req') this.additionalRequire,
+      @JsonKey(name: 'ver_type') required this.verType})
+      : super._();
 
   factory _$ItemCardImpl.fromJson(Map<String, dynamic> json) =>
       _$$ItemCardImplFromJson(json);
@@ -223,10 +239,13 @@ class _$ItemCardImpl implements _ItemCard {
   @override
   @JsonKey(name: 'additional_req')
   final String? additionalRequire;
+  @override
+  @JsonKey(name: 'ver_type')
+  final String verType;
 
   @override
   String toString() {
-    return 'ItemCard(id: $id, name: $name, imgUrl: $imgUrl, cardType: $cardType, itemType: $itemType, effect: $effect, additionalRequire: $additionalRequire)';
+    return 'ItemCard(id: $id, name: $name, imgUrl: $imgUrl, cardType: $cardType, itemType: $itemType, effect: $effect, additionalRequire: $additionalRequire, verType: $verType)';
   }
 
   @override
@@ -243,13 +262,14 @@ class _$ItemCardImpl implements _ItemCard {
                 other.itemType == itemType) &&
             (identical(other.effect, effect) || other.effect == effect) &&
             (identical(other.additionalRequire, additionalRequire) ||
-                other.additionalRequire == additionalRequire));
+                other.additionalRequire == additionalRequire) &&
+            (identical(other.verType, verType) || other.verType == verType));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, name, imgUrl, cardType,
-      itemType, effect, additionalRequire);
+      itemType, effect, additionalRequire, verType);
 
   /// Create a copy of ItemCard
   /// with the given fields replaced by the non-null parameter values.
@@ -267,7 +287,7 @@ class _$ItemCardImpl implements _ItemCard {
   }
 }
 
-abstract class _ItemCard implements ItemCard {
+abstract class _ItemCard extends ItemCard {
   const factory _ItemCard(
       {required final String id,
       required final String name,
@@ -276,8 +296,10 @@ abstract class _ItemCard implements ItemCard {
       final CardType cardType,
       @JsonKey(name: 'item_type') required final String itemType,
       @JsonKey(name: 'effect') required final String effect,
-      @JsonKey(name: 'additional_req')
-      final String? additionalRequire}) = _$ItemCardImpl;
+      @JsonKey(name: 'additional_req') final String? additionalRequire,
+      @JsonKey(name: 'ver_type')
+      required final String verType}) = _$ItemCardImpl;
+  const _ItemCard._() : super._();
 
   factory _ItemCard.fromJson(Map<String, dynamic> json) =
       _$ItemCardImpl.fromJson;
@@ -301,6 +323,9 @@ abstract class _ItemCard implements ItemCard {
   @override
   @JsonKey(name: 'additional_req')
   String? get additionalRequire;
+  @override
+  @JsonKey(name: 'ver_type')
+  String get verType;
 
   /// Create a copy of ItemCard
   /// with the given fields replaced by the non-null parameter values.

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:logger/logger.dart';
 import 'package:rule_to_slay/application/router/router.dart';
 import 'package:rule_to_slay/application/router/routes.dart';
-import 'package:rule_to_slay/constants/assets_const.dart';
-import 'package:rule_to_slay/presentation/tutorial_Screen/widgets/base_howToPlay.dart';
+import 'package:rule_to_slay/constants/const.dart';
+import 'package:rule_to_slay/data/datasoures/json_datasource.dart';
 import 'package:rule_to_slay/presentation/widgets/common/appbar/bottom_decor_bar.dart';
 import 'package:rule_to_slay/presentation/widgets/common/redirect_card_item.dart';
-import 'package:rule_to_slay/presentation/widgets/common/test_new_widget.dart';
 import 'package:rule_to_slay/presentation/widgets/reveal_text.dart';
 import 'package:rule_to_slay/presentation/widgets/common/appbar/top_app_decor_bar.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -20,12 +20,20 @@ class MainScreen extends StatefulWidget {
 class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
+    final loc = AppLocalizations.of(context);
+    final gameJsonDataSource = GameJsonDataSourceImpl();
+    gameJsonDataSource.getMonsters().then((data) {
+      Logger().i(data.map((e) => e.toEntity()).toList().length);
+    }).catchError((error) {
+      Logger().e("Failed to load game data: $error");
+    });
     return Scaffold(
       bottomNavigationBar: BottomDecorBar(),
       appBar: TopAppBar(),
       extendBodyBehindAppBar: true,
       extendBody: true,
       body: Container(
+        height: MediaQuery.of(context).size.height,
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage(AssetImgs.mainBg),
@@ -34,33 +42,47 @@ class _MainScreenState extends State<MainScreen> {
         ),
         child: SafeArea(
           child: SingleChildScrollView(
-            child: Column(
-              children: [
-                _introduceText(),
-                RedirectCardItem(
-                  leadingIcon: Icons.play_arrow,
-                  text: 'How To Play',
-                  textStyle: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black,
-                  ),
-                  onTap: () {
-                    router.push(Routes.baseTutorialScreen);
-                  },
+              physics: const ClampingScrollPhysics(),
+              child: Expanded(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    _introduceText(),
+                    RedirectCardItem(
+                      leadingIcon: Icons.play_arrow,
+                      text: loc!.redirect_HowToPlay,
+                      textStyle: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
+                      ),
+                      onTap: () {
+                        router.push(Routes.howToPlayScreen);
+                      },
+                    ),
+                    SizedBox(height: 20),
+                    RedirectCardItem(
+                      leadingIcon: Icons.play_arrow,
+                      text: loc.redirect_CardList,
+                      textStyle: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
+                      ),
+                      onTap: () {
+                        router.push(Routes.cardListScreen);
+                      },
+                    ),
+                    TextButton(
+                      onPressed: () {
+                        router.go(Routes.splashScreen);
+                      },
+                      child: const Text('Go to Splash Screen',
+                          style: TextStyle(color: Colors.white)),
+                    ),
+                  ],
                 ),
-                TextButton(
-                  onPressed: () {
-                    router.go(Routes.splashScreen);
-                  },
-                  child: const Text('Go to Splash Screen',
-                      style: TextStyle(color: Colors.white)),
-                ),
-                //TODO: Remove it
-                BaseHowtoplay()
-              ],
-            ),
-          ),
+              )),
         ),
       ),
     );

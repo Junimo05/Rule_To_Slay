@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:rule_to_slay/application/injection.dart';
 import 'package:rule_to_slay/application/router/router.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 void main() {
+  setUpLocator();
+
   runApp(ProviderScope(
     child: MyApp(),
   ));
 }
-
-final helloWorldProvider = Provider<String>((ref) {
-  return 'Hello, World!';
-});
 
 class MyApp extends StatefulWidget {
   const MyApp({super.key});

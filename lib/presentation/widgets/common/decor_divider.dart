@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:rule_to_slay/constants/assets_const.dart';
+import 'package:rule_to_slay/constants/const.dart';
 
 class DecorDevider extends StatelessWidget {
   final String text;

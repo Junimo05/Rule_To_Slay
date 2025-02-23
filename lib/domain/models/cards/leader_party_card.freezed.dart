@@ -30,6 +30,8 @@ mixin _$PartyLeaderCard {
   String get classType => throw _privateConstructorUsedError;
   @JsonKey(name: 'aura')
   String get aura => throw _privateConstructorUsedError;
+  @JsonKey(name: 'ver_type')
+  String get verType => throw _privateConstructorUsedError;
 
   /// Serializes this PartyLeaderCard to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -54,7 +56,8 @@ abstract class $PartyLeaderCardCopyWith<$Res> {
       @JsonKey(name: 'type', fromJson: cardTypeFromJson, toJson: cardTypeToJson)
       CardType cardType,
       @JsonKey(name: 'class') String classType,
-      @JsonKey(name: 'aura') String aura});
+      @JsonKey(name: 'aura') String aura,
+      @JsonKey(name: 'ver_type') String verType});
 }
 
 /// @nodoc
@@ -78,6 +81,7 @@ class _$PartyLeaderCardCopyWithImpl<$Res, $Val extends PartyLeaderCard>
     Object? cardType = null,
     Object? classType = null,
     Object? aura = null,
+    Object? verType = null,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -104,6 +108,10 @@ class _$PartyLeaderCardCopyWithImpl<$Res, $Val extends PartyLeaderCard>
           ? _value.aura
           : aura // ignore: cast_nullable_to_non_nullable
               as String,
+      verType: null == verType
+          ? _value.verType
+          : verType // ignore: cast_nullable_to_non_nullable
+              as String,
     ) as $Val);
   }
 }
@@ -123,7 +131,8 @@ abstract class _$$LeaderPartyCardImplCopyWith<$Res>
       @JsonKey(name: 'type', fromJson: cardTypeFromJson, toJson: cardTypeToJson)
       CardType cardType,
       @JsonKey(name: 'class') String classType,
-      @JsonKey(name: 'aura') String aura});
+      @JsonKey(name: 'aura') String aura,
+      @JsonKey(name: 'ver_type') String verType});
 }
 
 /// @nodoc
@@ -145,6 +154,7 @@ class __$$LeaderPartyCardImplCopyWithImpl<$Res>
     Object? cardType = null,
     Object? classType = null,
     Object? aura = null,
+    Object? verType = null,
   }) {
     return _then(_$LeaderPartyCardImpl(
       id: null == id
@@ -171,13 +181,17 @@ class __$$LeaderPartyCardImplCopyWithImpl<$Res>
           ? _value.aura
           : aura // ignore: cast_nullable_to_non_nullable
               as String,
+      verType: null == verType
+          ? _value.verType
+          : verType // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$LeaderPartyCardImpl implements _LeaderPartyCard {
+class _$LeaderPartyCardImpl extends _LeaderPartyCard {
   const _$LeaderPartyCardImpl(
       {required this.id,
       required this.name,
@@ -185,7 +199,9 @@ class _$LeaderPartyCardImpl implements _LeaderPartyCard {
       @JsonKey(name: 'type', fromJson: cardTypeFromJson, toJson: cardTypeToJson)
       this.cardType = CardType.PARTY_LEADER,
       @JsonKey(name: 'class') required this.classType,
-      @JsonKey(name: 'aura') required this.aura});
+      @JsonKey(name: 'aura') required this.aura,
+      @JsonKey(name: 'ver_type') required this.verType})
+      : super._();
 
   factory _$LeaderPartyCardImpl.fromJson(Map<String, dynamic> json) =>
       _$$LeaderPartyCardImplFromJson(json);
@@ -206,10 +222,13 @@ class _$LeaderPartyCardImpl implements _LeaderPartyCard {
   @override
   @JsonKey(name: 'aura')
   final String aura;
+  @override
+  @JsonKey(name: 'ver_type')
+  final String verType;
 
   @override
   String toString() {
-    return 'PartyLeaderCard(id: $id, name: $name, imgUrl: $imgUrl, cardType: $cardType, classType: $classType, aura: $aura)';
+    return 'PartyLeaderCard(id: $id, name: $name, imgUrl: $imgUrl, cardType: $cardType, classType: $classType, aura: $aura, verType: $verType)';
   }
 
   @override
@@ -224,13 +243,14 @@ class _$LeaderPartyCardImpl implements _LeaderPartyCard {
                 other.cardType == cardType) &&
             (identical(other.classType, classType) ||
                 other.classType == classType) &&
-            (identical(other.aura, aura) || other.aura == aura));
+            (identical(other.aura, aura) || other.aura == aura) &&
+            (identical(other.verType, verType) || other.verType == verType));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, id, name, imgUrl, cardType, classType, aura);
+  int get hashCode => Object.hash(
+      runtimeType, id, name, imgUrl, cardType, classType, aura, verType);
 
   /// Create a copy of PartyLeaderCard
   /// with the given fields replaced by the non-null parameter values.
@@ -249,7 +269,7 @@ class _$LeaderPartyCardImpl implements _LeaderPartyCard {
   }
 }
 
-abstract class _LeaderPartyCard implements PartyLeaderCard {
+abstract class _LeaderPartyCard extends PartyLeaderCard {
   const factory _LeaderPartyCard(
       {required final String id,
       required final String name,
@@ -257,8 +277,10 @@ abstract class _LeaderPartyCard implements PartyLeaderCard {
       @JsonKey(name: 'type', fromJson: cardTypeFromJson, toJson: cardTypeToJson)
       final CardType cardType,
       @JsonKey(name: 'class') required final String classType,
-      @JsonKey(name: 'aura')
-      required final String aura}) = _$LeaderPartyCardImpl;
+      @JsonKey(name: 'aura') required final String aura,
+      @JsonKey(name: 'ver_type')
+      required final String verType}) = _$LeaderPartyCardImpl;
+  const _LeaderPartyCard._() : super._();
 
   factory _LeaderPartyCard.fromJson(Map<String, dynamic> json) =
       _$LeaderPartyCardImpl.fromJson;
@@ -279,6 +301,9 @@ abstract class _LeaderPartyCard implements PartyLeaderCard {
   @override
   @JsonKey(name: 'aura')
   String get aura;
+  @override
+  @JsonKey(name: 'ver_type')
+  String get verType;
 
   /// Create a copy of PartyLeaderCard
   /// with the given fields replaced by the non-null parameter values.

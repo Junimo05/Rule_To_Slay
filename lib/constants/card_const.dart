@@ -9,6 +9,7 @@ enum CardType {
   MAGIC('Magic'),
   CHALLENGE('Challenge'),
   PARTY_LEADER('Party Leader'),
+  MODIFIER('Modifier'),
   UNKNOWN("Unknown");
 
   final String value;

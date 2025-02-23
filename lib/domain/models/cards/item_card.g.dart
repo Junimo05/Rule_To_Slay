@@ -17,6 +17,7 @@ _$ItemCardImpl _$$ItemCardImplFromJson(Map<String, dynamic> json) =>
       itemType: json['item_type'] as String,
       effect: json['effect'] as String,
       additionalRequire: json['additional_req'] as String?,
+      verType: json['ver_type'] as String,
     );
 
 Map<String, dynamic> _$$ItemCardImplToJson(_$ItemCardImpl instance) =>
@@ -28,4 +29,5 @@ Map<String, dynamic> _$$ItemCardImplToJson(_$ItemCardImpl instance) =>
       'item_type': instance.itemType,
       'effect': instance.effect,
       'additional_req': instance.additionalRequire,
+      'ver_type': instance.verType,
     };

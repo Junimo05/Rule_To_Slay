@@ -25,6 +25,8 @@ mixin _$CardModel {
   String get imgUrl => throw _privateConstructorUsedError;
   @JsonKey(fromJson: cardTypeFromJson, toJson: cardTypeToJson)
   CardType get cardType => throw _privateConstructorUsedError;
+  @JsonKey(name: 'ver_type')
+  String get verType => throw _privateConstructorUsedError;
 
   /// Serializes this CardModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -46,7 +48,8 @@ abstract class $CardModelCopyWith<$Res> {
       String name,
       String imgUrl,
       @JsonKey(fromJson: cardTypeFromJson, toJson: cardTypeToJson)
-      CardType cardType});
+      CardType cardType,
+      @JsonKey(name: 'ver_type') String verType});
 }
 
 /// @nodoc
@@ -68,6 +71,7 @@ class _$CardModelCopyWithImpl<$Res, $Val extends CardModel>
     Object? name = null,
     Object? imgUrl = null,
     Object? cardType = null,
+    Object? verType = null,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -86,6 +90,10 @@ class _$CardModelCopyWithImpl<$Res, $Val extends CardModel>
           ? _value.cardType
           : cardType // ignore: cast_nullable_to_non_nullable
               as CardType,
+      verType: null == verType
+          ? _value.verType
+          : verType // ignore: cast_nullable_to_non_nullable
+              as String,
     ) as $Val);
   }
 }
@@ -103,7 +111,8 @@ abstract class _$$CardModelImplCopyWith<$Res>
       String name,
       String imgUrl,
       @JsonKey(fromJson: cardTypeFromJson, toJson: cardTypeToJson)
-      CardType cardType});
+      CardType cardType,
+      @JsonKey(name: 'ver_type') String verType});
 }
 
 /// @nodoc
@@ -123,6 +132,7 @@ class __$$CardModelImplCopyWithImpl<$Res>
     Object? name = null,
     Object? imgUrl = null,
     Object? cardType = null,
+    Object? verType = null,
   }) {
     return _then(_$CardModelImpl(
       id: null == id
@@ -141,6 +151,10 @@ class __$$CardModelImplCopyWithImpl<$Res>
           ? _value.cardType
           : cardType // ignore: cast_nullable_to_non_nullable
               as CardType,
+      verType: null == verType
+          ? _value.verType
+          : verType // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -153,7 +167,8 @@ class _$CardModelImpl implements _CardModel {
       required this.name,
       required this.imgUrl,
       @JsonKey(fromJson: cardTypeFromJson, toJson: cardTypeToJson)
-      this.cardType = CardType.UNKNOWN});
+      this.cardType = CardType.UNKNOWN,
+      @JsonKey(name: 'ver_type') required this.verType});
 
   factory _$CardModelImpl.fromJson(Map<String, dynamic> json) =>
       _$$CardModelImplFromJson(json);
@@ -167,10 +182,13 @@ class _$CardModelImpl implements _CardModel {
   @override
   @JsonKey(fromJson: cardTypeFromJson, toJson: cardTypeToJson)
   final CardType cardType;
+  @override
+  @JsonKey(name: 'ver_type')
+  final String verType;
 
   @override
   String toString() {
-    return 'CardModel(id: $id, name: $name, imgUrl: $imgUrl, cardType: $cardType)';
+    return 'CardModel(id: $id, name: $name, imgUrl: $imgUrl, cardType: $cardType, verType: $verType)';
   }
 
   @override
@@ -182,12 +200,14 @@ class _$CardModelImpl implements _CardModel {
             (identical(other.name, name) || other.name == name) &&
             (identical(other.imgUrl, imgUrl) || other.imgUrl == imgUrl) &&
             (identical(other.cardType, cardType) ||
-                other.cardType == cardType));
+                other.cardType == cardType) &&
+            (identical(other.verType, verType) || other.verType == verType));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, id, name, imgUrl, cardType);
+  int get hashCode =>
+      Object.hash(runtimeType, id, name, imgUrl, cardType, verType);
 
   /// Create a copy of CardModel
   /// with the given fields replaced by the non-null parameter values.
@@ -207,11 +227,13 @@ class _$CardModelImpl implements _CardModel {
 
 abstract class _CardModel implements CardModel {
   const factory _CardModel(
-      {required final String id,
-      required final String name,
-      required final String imgUrl,
-      @JsonKey(fromJson: cardTypeFromJson, toJson: cardTypeToJson)
-      final CardType cardType}) = _$CardModelImpl;
+          {required final String id,
+          required final String name,
+          required final String imgUrl,
+          @JsonKey(fromJson: cardTypeFromJson, toJson: cardTypeToJson)
+          final CardType cardType,
+          @JsonKey(name: 'ver_type') required final String verType}) =
+      _$CardModelImpl;
 
   factory _CardModel.fromJson(Map<String, dynamic> json) =
       _$CardModelImpl.fromJson;
@@ -225,6 +247,9 @@ abstract class _CardModel implements CardModel {
   @override
   @JsonKey(fromJson: cardTypeFromJson, toJson: cardTypeToJson)
   CardType get cardType;
+  @override
+  @JsonKey(name: 'ver_type')
+  String get verType;
 
   /// Create a copy of CardModel
   /// with the given fields replaced by the non-null parameter values.

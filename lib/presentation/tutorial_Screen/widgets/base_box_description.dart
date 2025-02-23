@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:rule_to_slay/application/app_localizations.dart';
-import 'package:rule_to_slay/constants/assets_const.dart';
-import 'package:rule_to_slay/presentation/widgets/common/divider.dart';
+import 'package:rule_to_slay/constants/const.dart';
+import 'package:rule_to_slay/presentation/widgets/common/decor_divider.dart';
 import 'package:rule_to_slay/presentation/widgets/common/card/transform_card.dart';
 
 class BaseBoxDescription extends StatefulWidget {
@@ -61,6 +61,7 @@ class _BaseBoxDescriptionState extends State<BaseBoxDescription> {
             child: Center(
               child: GridView.builder(
                 shrinkWrap: true,
+                physics: NeverScrollableScrollPhysics(),
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: screenWidth > 900 ? 5 : 2,
                   crossAxisSpacing: 10,
