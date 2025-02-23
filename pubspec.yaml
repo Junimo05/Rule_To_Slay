@@ -54,6 +54,13 @@ dependencies:
   auto_size_text: ^3.0.0
   logger: ^2.5.0
   stroke_text: ^1.0.0
+  carousel_slider: ^5.0.0
+  get_it: ^8.0.3
+  path_provider: ^2.1.5
+  sqflite: ^2.4.1
+  path: ^1.9.0
+  shared_preferences: ^2.5.2
+  sqlite3_flutter_libs: ^0.5.30
 
 dev_dependencies:
   flutter_test:
@@ -65,7 +72,7 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^5.0.0
-  riverpod_generator: ^2.6.4
+  riverpod_generator: ^2.5.0
   build_runner: ^2.4.14
   custom_lint: ^0.7.2
   riverpod_lint: ^2.6.4
@@ -88,6 +95,7 @@ flutter:
   #   - images/a_dot_ham.jpeg
 
   assets:
+    - assets/data.json
     - assets/imgs/
     - assets/imgs/background/
     - assets/imgs/monsters/
